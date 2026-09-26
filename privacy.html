@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy & Analytics | Prabeen Panthi</title>
+
+    <meta
+        name="description"
+        content="Privacy and analytics information for Prabeen Panthi's developer portfolio."
+    >
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2309090d'/%3E%3Ctext x='50' y='69' text-anchor='middle' font-family='Arial' font-size='62' font-weight='800' fill='%236c63ff'%3EP%3C/text%3E%3C/svg%3E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WJ53CR71H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-0WJ53CR71H');
+    </script>
+
+    <style>
+        :root {
+            --bg: #08090d;
+            --surface: #101218;
+            --surface-2: #151821;
+            --border: rgba(255, 255, 255, 0.09);
+            --text: #f5f5f7;
+            --muted: #9da3b4;
+            --accent: #7c6cff;
+            --accent-2: #a99fff;
+            --shadow: rgba(0, 0, 0, 0.35);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background:
+                radial-gradient(
+                    circle at 15% 10%,
+                    rgba(124, 108, 255, 0.12),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 85% 80%,
+                    rgba(124, 108, 255, 0.08),
+                    transparent 30%
+                ),
+                var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(100% - 40px, 900px);
+            margin: auto;
+        }
+
+        /* NAVBAR */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+            background: rgba(8, 9, 13, 0.78);
+            backdrop-filter: blur(18px);
+        }
+
+        nav {
+            width: min(100% - 40px, 1100px);
+            margin: auto;
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #7c6cff, #9c91ff);
+            color: white;
+            font-size: 20px;
+            font-weight: 800;
+            box-shadow: 0 8px 30px rgba(124, 108, 255, 0.25);
+        }
+
+        .brand span {
+            font-size: 15px;
+        }
+
+        .back-link {
+            color: var(--muted);
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--text);
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 90px 0 55px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 12px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.025);
+            color: var(--accent-2);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        h1 {
+            margin-top: 22px;
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1;
+            letter-spacing: -0.06em;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 22px auto 0;
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .updated {
+            margin-top: 18px;
+            font-size: 12px;
+            color: #73798a;
+        }
+
+        /* CONTENT */
+
+        main {
+            padding-bottom: 80px;
+        }
+
+        .privacy-card {
+            background: linear-gradient(
+                145deg,
+                rgba(255, 255, 255, 0.045),
+                rgba(255, 255, 255, 0.018)
+            );
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: clamp(25px, 5vw, 48px);
+            box-shadow: 0 25px 80px var(--shadow);
+        }
+
+        .section {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section:first-child {
+            padding-top: 0;
+        }
+
+        .section:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        h2 {
+            font-size: 22px;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .section p + p {
+            margin-top: 12px;
+        }
+
+        ul {
+            margin: 15px 0 0 20px;
+            color: var(--muted);
+        }
+
+        li {
+            margin: 8px 0;
+            padding-left: 5px;
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        .highlight {
+            margin-top: 18px;
+            padding: 17px 18px;
+            border: 1px solid rgba(124, 108, 255, 0.2);
+            border-radius: 14px;
+            background: rgba(124, 108, 255, 0.06);
+        }
+
+        .highlight p {
+            font-size: 14px;
+        }
+
+        .email {
+            color: var(--accent-2);
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 35px 0;
+            background: rgba(255, 255, 255, 0.015);
+        }
+
+        .footer-inner {
+            width: min(100% - 40px, 1100px);
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .footer-copy {
+            color: #73798a;
+            font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .footer-links a {
+            color: var(--muted);
+            font-size: 13px;
+            transition: 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--text);
+        }
+
+        @media (max-width: 650px) {
+            nav {
+                min-height: 68px;
+            }
+
+            .hero {
+                padding: 65px 0 40px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .privacy-card {
+                border-radius: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav>
+            <a href="index.html" class="brand">
+                <div class="brand-icon">P</div>
+                <span>Prabeen Panthi</span>
+            </a>
+
+            <a href="index.html" class="back-link">
+                ← Back to Portfolio
+            </a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <span class="eyebrow">Privacy & Analytics</span>
+
+            <h1>Your privacy matters.</h1>
+
+            <p>
+                A simple overview of how this personal developer portfolio
+                uses analytics, local browser storage, and external services.
+            </p>
+
+            <div class="updated">
+                Last updated: September 2026
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <main>
+        <div class="container">
+
+            <article class="privacy-card">
+
+                <section class="section">
+                    <h2>1. About this website</h2>
+
+                    <p>
+                        This website is the personal developer portfolio of
+                        <strong>Prabeen Panthi</strong>. It showcases my
+                        education, skills, projects, programming work, and
+                        developer interests.
+                    </p>
+
+                    <p>
+                        This page explains the basic technologies and
+                        information practices used by the website.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h2>2. Google Analytics</h2>
+
+                    <p>
+                        This website uses <strong>Google Analytics</strong>
+                        to understand how visitors interact with the
+                        portfolio.
+                    </p>
+
+                    <p>
+                        Analytics may provide information such as general
+                        visitor activity, pages viewed, traffic sources,
+                        device or browser information, and approximate
+                        geographic information.
+                    </p>
+
+                    <div class="highlight">
+                        <p>
+                            <strong>Google Analytics Measurement ID:</strong>
+                            G-0WJ53CR71H
+                        </p>
+                    </div>
+
+                    <p>
+                        Analytics is used to understand website usage and
+                        improve the portfolio. It is not intended to identify
+                        individual visitors personally.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h2>3. Cookies and similar technologies</h2>
+
+                    <p>
+                        Google Analytics may use cookies or similar
+                        technologies to measure website activity.
+                    </p>
+
+                    <p>
+                        Your browser may also store the website's theme
+                        preference locally so that your selected light or
+                        dark appearance can be remembered.
+                    </p>
+
+                    <div class="highlight">
+                        <p>
+                            The theme preference is stored locally in your
+                            browser and is not submitted to Prabeen Panthi's
+                            server as personal information.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2>4. Information you provide</h2>
+
+                    <p>
+                        The portfolio does not currently provide an account
+                        registration system, user login, newsletter
+                        subscription, or database for storing visitor
+                        profiles.
+                    </p>
+
+                    <p>
+                        If you contact me using my email address or another
+                        external platform, the information you provide will
+                        be handled through that service.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h2>5. External websites</h2>
+
+                    <p>
+                        This portfolio contains links to external services,
+                        including:
+                    </p>
+
+                    <ul>
+                        <li>GitHub</li>
+                        <li>Instagram</li>
+                        <li>Email</li>
+                        <li>Other project or technology websites</li>
+                    </ul>
+
+                    <p>
+                        When you follow an external link, you are visiting
+                        another website and that website's own privacy
+                        practices may apply.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h2>6. Third-party services</h2>
+
+                    <p>
+                        The website may use third-party services such as
+                        Google Fonts and Google Analytics to provide fonts and
+                        website measurement features.
+                    </p>
+
+                    <p>
+                        These services may process technical information
+                        according to their own policies and terms.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h2>7. Data security</h2>
+
+                    <p>
+                        Reasonable measures are used to keep the website
+                        maintained and secure. However, no website or
+                        internet transmission can be guaranteed to be
+                        completely secure.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h2>8. Changes to this page</h2>
+
+                    <p>
+                        This privacy information may be updated if the
+                        portfolio gains new features, analytics tools,
+                        contact forms, or other services that change how
+                        information is handled.
+                    </p>
+
+                    <p>
+                        The latest version will always be available on this
+                        page.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h2>9. Contact</h2>
+
+                    <p>
+                        If you have questions about this website or its
+                        privacy practices, you can contact:
+                    </p>
+
+                    <p>
+                        <strong>Prabeen Panthi</strong><br>
+                        <a
+                            class="email"
+                            href="mailto:panthiprabin91@gmail.com"
+                        >
+                            panthiprabin91@gmail.com
+                        </a>
+                    </p>
+                </section>
+
+            </article>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+
+            <div class="footer-copy">
+                © 2026 Prabeen Panthi. Built with code & curiosity.
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">Portfolio</a>
+
+                <a
+                    href="https://github.com/prabeen43"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="https://www.instagram.com/_prabeen.js_/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
+
+                <a href="mailto:panthiprabin91@gmail.com">
+                    Email
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
