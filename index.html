@@ -6,58 +6,113 @@
     <meta charset="UTF-8">
 
     <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+        content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Prabeen Panthi — BSc IT student, web developer and creative technologist from Kathmandu, Nepal.">
+        content="Prabeen Panthi — BSc IT student, developer and creative technologist from Kathmandu, Nepal.">
 
-    <title>Prabeen Panthi | Developer</title>
+    <meta name="author"
+        content="Prabeen Panthi">
+
+    <meta name="theme-color"
+        content="#08090c">
+
+    <title>Prabeen Panthi | Developer & BSc IT Student</title>
+
+    <!-- GOOGLE FONTS -->
 
     <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+        href="https://fonts.googleapis.com">
 
     <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
+        rel="stylesheet">
+
+    <!-- CSS -->
 
     <link rel="stylesheet"
-          href="style.css">
+        href="style.css">
 
 </head>
 
 
 <body>
 
+<!-- BACKGROUND EFFECT -->
+
+<div class="background-grid"></div>
+
 <div class="noise"></div>
 
 
-<!-- ================= NAVIGATION ================= -->
+<!-- ================= NAVBAR ================= -->
 
 <header class="navbar">
 
-    <a href="#home" class="logo">
-        <span>PP</span> / PRABEEN
+    <a href="#home"
+        class="logo">
+
+        <span>PP</span>
+
+        PRABEEN
+
     </a>
+
 
     <nav id="navLinks">
 
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#work">Projects</a>
-        <a href="#game">Play</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#education">
+            Education
+        </a>
+
+        <a href="#skills">
+            Skills
+        </a>
+
+        <a href="#work">
+            Work
+        </a>
+
+        <a href="#game">
+            Game
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
 
     </nav>
 
-    <button
-        class="menu-btn"
-        id="menuBtn">
-        ☰
-    </button>
+
+    <div class="nav-actions">
+
+        <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Toggle theme">
+
+            ☾
+
+        </button>
+
+
+        <button
+            id="menuBtn"
+            class="menu-btn"
+            aria-label="Open menu">
+
+            ☰
+
+        </button>
+
+    </div>
 
 </header>
 
@@ -68,56 +123,109 @@
 
 <!-- ================= HERO ================= -->
 
-<section class="hero" id="home">
+<section
+    class="hero"
+    id="home">
+
 
     <div class="hero-content">
+
 
         <div class="eyebrow">
 
             <span class="status-dot"></span>
 
-            AVAILABLE FOR CREATIVE PROJECTS
+            STUDENT DEVELOPER · KATHMANDU
 
         </div>
 
 
         <h1>
 
-            Hi, I'm
-            <span>Prabeen.</span>
+            Building
+            <span>ideas</span>
 
             <br>
 
-            I build things
-            <em>for the web.</em>
+            into digital
+            <em>experiences.</em>
 
         </h1>
 
 
         <p class="hero-description">
 
-            BSc IT student, developer and creative builder
-            from Kathmandu, Nepal. I enjoy turning ideas into
-            websites, interactive experiences, games and useful
-            digital products.
+            I'm Prabeen Panthi, a BSc IT student and
+            aspiring developer from Kathmandu, Nepal.
+            I build websites, browser games, small Python
+            projects and experiment with Roblox development.
 
         </p>
 
 
         <div class="hero-buttons">
 
-            <a href="#work"
-               class="btn btn-primary">
+            <a
+                href="#work"
+                class="btn btn-primary">
 
-                Explore my work ↗
+                VIEW MY WORK
+                <span>↗</span>
 
             </a>
 
 
-            <a href="mailto:panthiprabin91@gmail.com"
-               class="btn btn-secondary">
+            <a
+                href="#contact"
+                class="btn btn-secondary">
 
-                Let's talk
+                CONTACT ME
+
+            </a>
+
+
+            <!-- Put your CV PDF in the same folder and
+                 name it Prabeen-CV.pdf -->
+
+            <a
+                href="Prabeen-CV.pdf"
+                download
+                class="btn btn-ghost">
+
+                DOWNLOAD CV
+                ↓
+
+            </a>
+
+        </div>
+
+
+        <div class="social-links">
+
+            <!-- Replace these URLs with your real profiles -->
+
+            <a
+                href="https://github.com/"
+                target="_blank">
+
+                GitHub ↗
+
+            </a>
+
+
+            <a
+                href="https://www.linkedin.com/"
+                target="_blank">
+
+                LinkedIn ↗
+
+            </a>
+
+
+            <a
+                href="mailto:panthiprabin91@gmail.com">
+
+                Email ↗
 
             </a>
 
@@ -139,7 +247,7 @@
 
             <div>
 
-                <span>STUDYING</span>
+                <span>EDUCATION</span>
 
                 <strong>
                     BSc Information Technology
@@ -150,10 +258,10 @@
 
             <div>
 
-                <span>STARTED</span>
+                <span>FOCUS</span>
 
                 <strong>
-                    August 2026
+                    Web · Python · Games
                 </strong>
 
             </div>
@@ -164,46 +272,180 @@
 
 
 
-    <!-- HERO PHOTO -->
+    <!-- HERO VISUAL -->
 
-    <div class="hero-photo">
+    <div class="hero-visual">
 
-        <div class="photo-frame">
 
-            <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85"
-                alt="Developer workspace with laptop and code">
+        <div class="code-window">
 
-            <div class="photo-overlay"></div>
+            <div class="window-top">
 
-            <div class="photo-caption">
+                <div class="window-dots">
 
-                <span>01</span>
+                    <i></i>
+                    <i></i>
+                    <i></i>
 
-                <strong>
-                    BUILD.
-                </strong>
+                </div>
 
-                <small>
-                    LEARN · CREATE · REPEAT
-                </small>
+                <span>
+                    prabeen.js
+                </span>
+
+                <span>
+                    ●
+                </span>
+
+            </div>
+
+
+            <div class="code-content">
+
+                <div>
+                    <span class="line-number">01</span>
+                    <span class="purple">const</span>
+                    <span class="white"> developer </span>
+                    <span>=</span>
+                    <span class="green"> {</span>
+                </div>
+
+
+                <div>
+                    <span class="line-number">02</span>
+                    <span class="white"> name:</span>
+                    <span class="yellow"> "Prabeen"</span>
+                </div>
+
+
+                <div>
+                    <span class="line-number">03</span>
+                    <span class="white"> location:</span>
+                    <span class="yellow">
+                        "Kathmandu, Nepal"
+                    </span>
+                </div>
+
+
+                <div>
+                    <span class="line-number">04</span>
+                    <span class="white"> education:</span>
+                    <span class="yellow">
+                        "BSc IT"
+                    </span>
+                </div>
+
+
+                <div>
+                    <span class="line-number">05</span>
+                    <span class="white"> languages:</span>
+                    <span class="green"> [</span>
+                </div>
+
+
+                <div>
+                    <span class="line-number">06</span>
+                    <span class="yellow">
+                        "JavaScript",
+                    </span>
+                </div>
+
+
+                <div>
+                    <span class="line-number">07</span>
+                    <span class="yellow">
+                        "Python",
+                    </span>
+                </div>
+
+
+                <div>
+                    <span class="line-number">08</span>
+                    <span class="yellow">
+                        "C",
+                    </span>
+                </div>
+
+
+                <div>
+                    <span class="line-number">09</span>
+                    <span class="yellow">
+                        "HTML/CSS"
+                    </span>
+                    <span class="green"> ]</span>
+                </div>
+
+
+                <div>
+                    <span class="line-number">10</span>
+                    <span class="white"> learning:</span>
+                    <span class="green"> [</span>
+                </div>
+
+
+                <div>
+                    <span class="line-number">11</span>
+                    <span class="yellow">
+                        "React",
+                    </span>
+                    <span class="yellow">
+                        "Luau"
+                    </span>
+                    <span class="green"> ]</span>
+                </div>
+
+
+                <div>
+                    <span class="line-number">12</span>
+                    <span class="green">};</span>
+                </div>
+
+
+                <div class="cursor-line">
+
+                    <span class="line-number">13</span>
+
+                    <span class="purple">
+                        build
+                    </span>
+
+                    <span>(</span>
+
+                    <span class="yellow">
+                        "something cool"
+                    </span>
+
+                    <span>);</span>
+
+                    <span class="typing-cursor"></span>
+
+                </div>
 
             </div>
 
         </div>
 
 
-        <div class="floating-card">
+        <div class="floating-tech tech-one">
+            PYTHON
+        </div>
 
-            <span>01 / CURRENTLY</span>
 
-            <strong>
-                Learning & building
-            </strong>
+        <div class="floating-tech tech-two">
+            JAVASCRIPT
+        </div>
 
-            <p>
-                Web development · JavaScript · IT
-            </p>
+
+        <div class="floating-tech tech-three">
+            LUAU
+        </div>
+
+
+        <div class="hero-orbit">
+
+            <span></span>
+            <span></span>
+            <span></span>
 
         </div>
 
@@ -220,28 +462,40 @@
     <div>
 
         WEB DEVELOPMENT
-        <span>✦</span>
+
+        <b>✦</b>
+
+        PYTHON
+
+        <b>✦</b>
 
         JAVASCRIPT
-        <span>✦</span>
+
+        <b>✦</b>
+
+        ROBLOX DEVELOPMENT
+
+        <b>✦</b>
 
         UI / UX
-        <span>✦</span>
+
+        <b>✦</b>
 
         CREATIVE CODING
-        <span>✦</span>
+
+        <b>✦</b>
 
         BSC IT
-        <span>✦</span>
 
-        NEPAL
-        <span>✦</span>
+        <b>✦</b>
+
+        KATHMANDU
+
+        <b>✦</b>
 
         WEB DEVELOPMENT
-        <span>✦</span>
 
-        JAVASCRIPT
-        <span>✦</span>
+        <b>✦</b>
 
     </div>
 
@@ -251,25 +505,27 @@
 
 <!-- ================= ABOUT ================= -->
 
-<section class="section about"
-         id="about">
+<section
+    class="section"
+    id="about">
+
 
     <div class="section-label">
-        01 / ABOUT ME
+        01 / ABOUT
     </div>
 
 
     <div class="about-grid">
 
 
-        <div>
+        <div class="section-title">
 
             <h2>
 
-                A student who
+                Curious
                 <br>
 
-                <em>likes to build.</em>
+                <em>by nature.</em>
 
             </h2>
 
@@ -278,30 +534,30 @@
 
         <div class="about-content">
 
-            <p>
+            <p class="large-text">
 
-                I'm Prabeen Panthi, an IT student from
-                Kathmandu, Nepal. I like experimenting with
-                code, design and digital products.
-
-            </p>
-
-
-            <p>
-
-                My journey started with programming fundamentals
-                and web development. I'm currently continuing
-                that journey through a BSc in Information
-                Technology at Techspire.
+                I'm a student developer who enjoys
+                experimenting with technology and turning
+                small ideas into working projects.
 
             </p>
 
 
             <p>
 
-                I enjoy creating websites, browser games,
-                interfaces and small tools that solve practical
-                problems.
+                My current focus is web development, but
+                I also enjoy writing small Python programs,
+                creating browser games and learning how
+                games are built inside Roblox Studio.
+
+            </p>
+
+
+            <p>
+
+                I am currently studying BSc Information
+                Technology at Techspire in Baneshwor,
+                Kathmandu.
 
             </p>
 
@@ -309,17 +565,17 @@
             <div class="about-photo">
 
                 <img
-                    src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1000&q=85"
+                    src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=85"
                     alt="Kathmandu Nepal">
 
-                <div>
+                <div class="photo-info">
 
                     <span>
                         KATHMANDU / NEPAL
                     </span>
 
                     <strong>
-                        Where the journey started.
+                        Learning. Building. Improving.
                     </strong>
 
                 </div>
@@ -331,18 +587,9 @@
 
                 <div>
 
-                    <strong>10+</strong>
-
-                    <span>
-                        Skills & technologies
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <strong>08+</strong>
+                    <strong>
+                        08+
+                    </strong>
 
                     <span>
                         Project concepts
@@ -353,10 +600,25 @@
 
                 <div>
 
-                    <strong>2026</strong>
+                    <strong>
+                        10+
+                    </strong>
 
                     <span>
-                        BSc IT journey
+                        Technologies
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        2026
+                    </strong>
+
+                    <span>
+                        BSc IT started
                     </span>
 
                 </div>
@@ -373,24 +635,31 @@
 
 <!-- ================= EDUCATION ================= -->
 
-<section class="section education"
-         id="education">
+<section
+    class="section education-section"
+    id="education">
+
 
     <div class="section-label">
         02 / EDUCATION
     </div>
 
 
-    <div class="education-heading">
+    <div class="section-heading-row">
 
         <h2>
-            My academic
+
+            Academic
             <em>journey.</em>
+
         </h2>
 
+
         <p>
-            From school fundamentals to an IT-focused
-            university journey.
+
+            From school fundamentals to an
+            IT-focused university journey.
+
         </p>
 
     </div>
@@ -399,34 +668,35 @@
     <div class="timeline">
 
 
-        <article class="education-item">
+        <article class="timeline-item">
 
-            <div class="edu-year">
+            <div class="timeline-date">
                 SCHOOL
             </div>
 
-            <div class="edu-line">
-                <span></span>
-            </div>
 
-            <div class="edu-content">
+            <div class="timeline-dot"></div>
 
-                <p class="edu-number">
+
+            <div class="timeline-content">
+
+                <span class="timeline-number">
                     01
-                </p>
+                </span>
 
                 <h3>
                     Bagiswori Higher Secondary School
                 </h3>
 
-                <p class="edu-place">
+                <h4>
                     Chyamashing, Bhaktapur
-                </p>
+                </h4>
 
                 <p>
-                    Completed foundational schooling and developed
-                    an early interest in technology and computer
-                    studies.
+
+                    Foundational education and the
+                    beginning of my academic journey.
+
                 </p>
 
             </div>
@@ -435,34 +705,37 @@
 
 
 
-        <article class="education-item">
+        <article class="timeline-item">
 
-            <div class="edu-year">
+            <div class="timeline-date">
                 HIGH SCHOOL
             </div>
 
-            <div class="edu-line">
-                <span></span>
-            </div>
 
-            <div class="edu-content">
+            <div class="timeline-dot"></div>
 
-                <p class="edu-number">
+
+            <div class="timeline-content">
+
+                <span class="timeline-number">
                     02
-                </p>
+                </span>
 
                 <h3>
                     NCCS Secondary School
                 </h3>
 
-                <p class="edu-place">
+                <h4>
                     Paknajol, Kathmandu
-                </p>
+                </h4>
 
                 <p>
-                    Management stream with Computer Science as
-                    a major, developing foundations in programming,
-                    databases and computer science.
+
+                    Management stream with Computer Science
+                    as a major. Developed foundations in
+                    programming, databases and computer
+                    science.
+
                 </p>
 
             </div>
@@ -471,42 +744,167 @@
 
 
 
-        <article class="education-item current">
+        <article class="timeline-item current">
 
-            <div class="edu-year">
+            <div class="timeline-date">
                 2026 — NOW
             </div>
 
-            <div class="edu-line">
-                <span></span>
-            </div>
 
-            <div class="edu-content">
+            <div class="timeline-dot"></div>
 
-                <div class="current-badge">
+
+            <div class="timeline-content">
+
+                <span class="current-label">
                     CURRENT
-                </div>
+                </span>
 
-                <p class="edu-number">
+                <span class="timeline-number">
                     03
-                </p>
+                </span>
 
                 <h3>
                     Techspire
                 </h3>
 
-                <p class="edu-place">
+                <h4>
                     Baneshwor, Kathmandu
-                </p>
+                </h4>
 
                 <p>
-                    BSc in Information Technology. Started in
-                    August 2026 and currently developing deeper
-                    knowledge across programming, software,
-                    web technologies and IT.
+
+                    BSc in Information Technology.
+                    Started in August 2026. Currently
+                    expanding my knowledge across
+                    programming, software, web development
+                    and IT.
+
                 </p>
 
             </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= WHAT I DO ================= -->
+
+<section
+    class="section services-section">
+
+
+    <div class="section-label">
+        03 / WHAT I DO
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <article class="service-card">
+
+            <span>
+                01
+            </span>
+
+            <div class="service-icon">
+                &lt;/&gt;
+            </div>
+
+            <h3>
+                Web Development
+            </h3>
+
+            <p>
+
+                Responsive websites, interactive
+                interfaces and browser applications
+                using HTML, CSS and JavaScript.
+
+            </p>
+
+        </article>
+
+
+
+        <article class="service-card">
+
+            <span>
+                02
+            </span>
+
+            <div class="service-icon">
+                Py
+            </div>
+
+            <h3>
+                Python Projects
+            </h3>
+
+            <p>
+
+                Small Python programs, utilities,
+                experiments and programming exercises
+                while developing stronger fundamentals.
+
+            </p>
+
+        </article>
+
+
+
+        <article class="service-card">
+
+            <span>
+                03
+            </span>
+
+            <div class="service-icon">
+                R
+            </div>
+
+            <h3>
+                Roblox Development
+            </h3>
+
+            <p>
+
+                Beginner experiments with Roblox Studio,
+                Luau scripting, game mechanics and
+                interactive experiences.
+
+            </p>
+
+        </article>
+
+
+
+        <article class="service-card">
+
+            <span>
+                04
+            </span>
+
+            <div class="service-icon">
+                ✦
+            </div>
+
+            <h3>
+                Creative Coding
+            </h3>
+
+            <p>
+
+                Browser games, animations and unusual
+                experiments that combine programming
+                with visual design.
+
+            </p>
 
         </article>
 
@@ -518,24 +916,31 @@
 
 <!-- ================= SKILLS ================= -->
 
-<section class="section skills"
-         id="skills">
+<section
+    class="section skills-section"
+    id="skills">
+
 
     <div class="section-label">
-        03 / SKILLS
+        04 / SKILLS
     </div>
 
 
-    <div class="skills-heading">
+    <div class="section-heading-row">
 
         <h2>
+
             My
             <em>toolkit.</em>
+
         </h2>
 
+
         <p>
-            Technologies, tools and concepts I'm learning
-            and working with.
+
+            Technologies I use, understand or am
+            currently learning.
+
         </p>
 
     </div>
@@ -544,167 +949,296 @@
     <div class="skills-grid">
 
 
-        <div class="skill-card">
+        <article class="skill-category">
 
-            <span>01</span>
+            <div class="skill-category-top">
 
-            <h3>
-                Frontend
-            </h3>
+                <span>
+                    01
+                </span>
 
-            <p>
-                Building responsive interfaces and
-                interactive web experiences.
-            </p>
-
-            <div class="skill-tags">
-
-                <b>HTML5</b>
-                <b>CSS3</b>
-                <b>JavaScript</b>
-                <b>Responsive Design</b>
-                <b>Animations</b>
+                <span>
+                    LANGUAGES
+                </span>
 
             </div>
 
-        </div>
-
-
-
-        <div class="skill-card">
-
-            <span>02</span>
 
             <h3>
                 Programming
             </h3>
 
-            <p>
-                Developing programming fundamentals and
-                problem-solving skills.
-            </p>
 
-            <div class="skill-tags">
+            <div class="skill-list">
 
-                <b>C</b>
-                <b>JavaScript</b>
-                <b>Functions</b>
-                <b>Recursion</b>
-                <b>Logic</b>
+                <div>
+                    <b>JavaScript</b>
+                    <span>Learning / Building</span>
+                </div>
+
+                <div>
+                    <b>Python</b>
+                    <span>Small Projects</span>
+                </div>
+
+                <div>
+                    <b>C</b>
+                    <span>Academic</span>
+                </div>
+
+                <div>
+                    <b>Luau</b>
+                    <span>Beginner</span>
+                </div>
 
             </div>
 
-        </div>
+        </article>
 
 
 
-        <div class="skill-card">
+        <article class="skill-category">
 
-            <span>03</span>
+            <div class="skill-category-top">
+
+                <span>
+                    02
+                </span>
+
+                <span>
+                    WEB
+                </span>
+
+            </div>
+
 
             <h3>
-                Database
+                Frontend
             </h3>
 
-            <p>
-                Learning how information is structured,
-                stored and managed.
-            </p>
 
-            <div class="skill-tags">
+            <div class="skill-list">
 
-                <b>SQL</b>
-                <b>DBMS</b>
-                <b>MySQL</b>
-                <b>Data Models</b>
+                <div>
+                    <b>HTML5</b>
+                    <span>Comfortable</span>
+                </div>
+
+                <div>
+                    <b>CSS3</b>
+                    <span>Comfortable</span>
+                </div>
+
+                <div>
+                    <b>JavaScript DOM</b>
+                    <span>Learning</span>
+                </div>
+
+                <div>
+                    <b>Responsive Design</b>
+                    <span>Building</span>
+                </div>
 
             </div>
 
-        </div>
+        </article>
 
 
 
-        <div class="skill-card">
+        <article class="skill-category">
 
-            <span>04</span>
+            <div class="skill-category-top">
+
+                <span>
+                    03
+                </span>
+
+                <span>
+                    DATABASE
+                </span>
+
+            </div>
+
 
             <h3>
-                UI / UX
+                Data
             </h3>
 
-            <p>
-                Designing clean interfaces with focus
-                on usability and visual hierarchy.
-            </p>
 
-            <div class="skill-tags">
+            <div class="skill-list">
 
-                <b>UI Design</b>
-                <b>UX</b>
-                <b>Figma</b>
-                <b>Layouts</b>
+                <div>
+                    <b>SQL</b>
+                    <span>Academic</span>
+                </div>
+
+                <div>
+                    <b>MySQL</b>
+                    <span>Learning</span>
+                </div>
+
+                <div>
+                    <b>DBMS</b>
+                    <span>Academic</span>
+                </div>
+
+                <div>
+                    <b>Data Modeling</b>
+                    <span>Learning</span>
+                </div>
 
             </div>
 
-        </div>
+        </article>
 
 
 
-        <div class="skill-card">
+        <article class="skill-category">
 
-            <span>05</span>
+            <div class="skill-category-top">
+
+                <span>
+                    04
+                </span>
+
+                <span>
+                    TOOLS
+                </span>
+
+            </div>
+
 
             <h3>
                 Developer Tools
             </h3>
 
-            <p>
-                Tools I use while learning, developing
-                and experimenting.
-            </p>
 
-            <div class="skill-tags">
+            <div class="skill-list">
 
-                <b>VS Code</b>
-                <b>Git</b>
-                <b>GitHub</b>
-                <b>Chrome DevTools</b>
+                <div>
+                    <b>VS Code</b>
+                    <span>Daily</span>
+                </div>
+
+                <div>
+                    <b>Git</b>
+                    <span>Learning</span>
+                </div>
+
+                <div>
+                    <b>GitHub</b>
+                    <span>Learning</span>
+                </div>
+
+                <div>
+                    <b>Figma</b>
+                    <span>UI / UX</span>
+                </div>
 
             </div>
 
-        </div>
+        </article>
 
 
 
-        <div class="skill-card">
+        <article class="skill-category">
 
-            <span>06</span>
+            <div class="skill-category-top">
+
+                <span>
+                    05
+                </span>
+
+                <span>
+                    GAME DEV
+                </span>
+
+            </div>
+
 
             <h3>
-                Creative Tech
+                Games
             </h3>
 
-            <p>
-                Combining technology with interactive
-                experiences and visual ideas.
-            </p>
 
-            <div class="skill-tags">
+            <div class="skill-list">
 
-                <b>Browser Games</b>
-                <b>Animations</b>
-                <b>APIs</b>
-                <b>AI Concepts</b>
+                <div>
+                    <b>Roblox Studio</b>
+                    <span>Beginner</span>
+                </div>
+
+                <div>
+                    <b>Luau</b>
+                    <span>Beginner</span>
+                </div>
+
+                <div>
+                    <b>Game Logic</b>
+                    <span>Learning</span>
+                </div>
+
+                <div>
+                    <b>Browser Games</b>
+                    <span>Building</span>
+                </div>
 
             </div>
 
-        </div>
+        </article>
+
+
+
+        <article class="skill-category">
+
+            <div class="skill-category-top">
+
+                <span>
+                    06
+                </span>
+
+                <span>
+                    CURRENTLY
+                </span>
+
+            </div>
+
+
+            <h3>
+                Learning Next
+            </h3>
+
+
+            <div class="skill-list">
+
+                <div>
+                    <b>React</b>
+                    <span>Learning</span>
+                </div>
+
+                <div>
+                    <b>APIs</b>
+                    <span>Learning</span>
+                </div>
+
+                <div>
+                    <b>Luau</b>
+                    <span>Learning</span>
+                </div>
+
+                <div>
+                    <b>Git & GitHub</b>
+                    <span>Improving</span>
+                </div>
+
+            </div>
+
+        </article>
 
     </div>
 
 
-
-    <div class="learning-bar">
+    <div class="learning-strip">
 
         <span>
             CURRENTLY LEARNING
@@ -712,12 +1246,12 @@
 
         <div>
 
-            <b>JavaScript</b>
             <b>React</b>
-            <b>Git & GitHub</b>
-            <b>SQL</b>
-            <b>UI/UX</b>
             <b>APIs</b>
+            <b>Luau</b>
+            <b>Git</b>
+            <b>GitHub</b>
+            <b>SQL</b>
 
         </div>
 
@@ -729,50 +1263,108 @@
 
 <!-- ================= PROJECTS ================= -->
 
-<section class="section work"
-         id="work">
+<section
+    class="section projects-section"
+    id="work">
 
-    <div class="section-header">
 
-        <div>
+    <div class="section-label">
+        05 / SELECTED WORK
+    </div>
 
-            <div class="section-label">
-                04 / PROJECTS
-            </div>
 
-            <h2>
-                Things I've
-                <em>built.</em>
-            </h2>
+    <div class="section-heading-row projects-heading">
 
-        </div>
+        <h2>
+
+            Things I've
+            <em>built.</em>
+
+        </h2>
 
 
         <p>
-            Experiments, websites, games and
-            product concepts.
+
+            A collection of web projects, games,
+            experiments and concepts.
+
         </p>
 
     </div>
 
 
+    <!-- FILTERS -->
 
-    <div class="projects">
+    <div class="project-filters">
+
+        <button
+            class="filter-btn active"
+            data-filter="all">
+
+            ALL
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="web">
+
+            WEB
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="game">
+
+            GAMES
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="python">
+
+            PYTHON
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="concept">
+
+            CONCEPTS
+
+        </button>
+
+    </div>
 
 
-        <!-- 01 -->
+    <div class="projects-grid">
 
-        <article class="project featured">
 
-            <div class="project-image project-astro">
+        <!-- PROJECT 01 -->
 
-                <span class="visual-label">
+        <article
+            class="project-card featured-project"
+            data-category="web">
+
+
+            <div class="project-visual astro">
+
+                <span class="visual-number">
                     01 / WEB APP
                 </span>
 
-                <div class="astro-circle"></div>
 
-                <div class="project-big-title">
+                <div class="astro-orbit">
+
+                    <span></span>
+
+                </div>
+
+
+                <div class="visual-title">
 
                     JYOTISH
                     <em>AI</em>
@@ -782,30 +1374,66 @@
             </div>
 
 
-            <div class="project-info">
+            <div class="project-details">
 
-                <div class="project-number">
-                    <span>01</span>
-                    <span>2026</span>
+                <div class="project-meta">
+
+                    <span>
+                        01
+                    </span>
+
+                    <span>
+                        2026
+                    </span>
+
                 </div>
+
 
                 <h3>
                     JyotishAI
                 </h3>
 
+
                 <p>
+
                     A modern Vedic astrology web application
-                    concept featuring Kundali, planetary
-                    positions, Nakshatra, Dasha and
-                    report-oriented interfaces.
+                    concept with Kundali, planetary positions,
+                    Nakshatra, Dasha and report-oriented
+                    interfaces.
+
                 </p>
 
-                <div class="tags">
 
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>UI/UX</span>
+                <div class="project-tags">
+
+                    <span>
+                        HTML
+                    </span>
+
+                    <span>
+                        CSS
+                    </span>
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                    <span>
+                        UI / UX
+                    </span>
+
+                </div>
+
+
+                <div class="project-links">
+
+                    <a href="#contact">
+                        LIVE DEMO ↗
+                    </a>
+
+                    <a href="#contact">
+                        SOURCE ↗
+                    </a>
 
                 </div>
 
@@ -815,51 +1443,84 @@
 
 
 
-        <!-- 02 -->
+        <!-- PROJECT 02 -->
 
-        <article class="project">
+        <article
+            class="project-card"
+            data-category="game">
 
-            <div class="project-image project-balloon">
 
-                <span class="visual-label">
+            <div class="project-visual balloon">
+
+                <span class="visual-number">
                     02 / GAME
                 </span>
 
-                <div class="balloon-shape one"></div>
-                <div class="balloon-shape two"></div>
-                <div class="balloon-shape three"></div>
 
-                <strong>
+                <div class="balloon-ball b1"></div>
+                <div class="balloon-ball b2"></div>
+                <div class="balloon-ball b3"></div>
+
+
+                <div class="visual-title small">
                     BALLOON
                     <br>
                     BLITZ
-                </strong>
+                </div>
 
             </div>
 
 
-            <div class="project-info">
+            <div class="project-details">
 
-                <div class="project-number">
-                    <span>02</span>
-                    <span>2026</span>
+                <div class="project-meta">
+
+                    <span>
+                        02
+                    </span>
+
+                    <span>
+                        2026
+                    </span>
+
                 </div>
+
 
                 <h3>
                     Balloon Blitz
                 </h3>
 
+
                 <p>
-                    Interactive balloon popping browser game
-                    featuring scoring, animation, streaks and
-                    responsive gameplay.
+
+                    A browser game focused on fast interaction,
+                    scoring, animation and streak-based gameplay.
+
                 </p>
 
-                <div class="tags">
 
-                    <span>JavaScript</span>
-                    <span>Game Logic</span>
-                    <span>CSS Animation</span>
+                <div class="project-tags">
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                    <span>
+                        CSS Animation
+                    </span>
+
+                    <span>
+                        Game Logic
+                    </span>
+
+                </div>
+
+
+                <div class="project-links">
+
+                    <a href="#game">
+                        PLAY GAME ↗
+                    </a>
 
                 </div>
 
@@ -869,15 +1530,19 @@
 
 
 
-        <!-- 03 -->
+        <!-- PROJECT 03 -->
 
-        <article class="project">
+        <article
+            class="project-card"
+            data-category="game">
 
-            <div class="project-image project-2048">
 
-                <span class="visual-label">
+            <div class="project-visual board2048">
+
+                <span class="visual-number">
                     03 / GAME
                 </span>
+
 
                 <div class="mini-board">
 
@@ -896,28 +1561,48 @@
             </div>
 
 
-            <div class="project-info">
+            <div class="project-details">
 
-                <div class="project-number">
-                    <span>03</span>
-                    <span>2026</span>
+                <div class="project-meta">
+
+                    <span>
+                        03
+                    </span>
+
+                    <span>
+                        2026
+                    </span>
+
                 </div>
+
 
                 <h3>
                     2048 Enhanced
                 </h3>
 
+
                 <p>
-                    A browser version of 2048 with undo,
-                    persistent high scores, AI gameplay
-                    and responsive controls.
+
+                    A browser version of 2048 with
+                    undo, persistent scores and experimental
+                    AI gameplay.
+
                 </p>
 
-                <div class="tags">
 
-                    <span>JavaScript</span>
-                    <span>LocalStorage</span>
-                    <span>Game AI</span>
+                <div class="project-tags">
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                    <span>
+                        LocalStorage
+                    </span>
+
+                    <span>
+                        Game AI
+                    </span>
 
                 </div>
 
@@ -927,51 +1612,76 @@
 
 
 
-        <!-- 04 -->
+        <!-- PROJECT 04 -->
 
-        <article class="project">
+        <article
+            class="project-card"
+            data-category="web">
 
-            <div class="project-image project-gadget">
 
-                <span class="visual-label">
+            <div class="project-visual gadget">
+
+                <span class="visual-number">
                     04 / PLATFORM
                 </span>
 
-                <div class="device-phone"></div>
 
-                <div class="device-laptop"></div>
+                <div class="phone-shape"></div>
 
-                <strong>
+                <div class="laptop-shape"></div>
+
+
+                <div class="visual-title small">
                     GADGET
                     <br>
                     GALAXY
-                </strong>
+                </div>
 
             </div>
 
 
-            <div class="project-info">
+            <div class="project-details">
 
-                <div class="project-number">
-                    <span>04</span>
-                    <span>2026</span>
+                <div class="project-meta">
+
+                    <span>
+                        04
+                    </span>
+
+                    <span>
+                        2026
+                    </span>
+
                 </div>
+
 
                 <h3>
                     Gadget Galaxy
                 </h3>
 
+
                 <p>
+
                     Technology discovery platform concept
                     covering phones, laptops, cameras,
                     prices and specifications.
+
                 </p>
 
-                <div class="tags">
 
-                    <span>Web Design</span>
-                    <span>UI</span>
-                    <span>Tech</span>
+                <div class="project-tags">
+
+                    <span>
+                        Web Design
+                    </span>
+
+                    <span>
+                        UI
+                    </span>
+
+                    <span>
+                        Tech
+                    </span>
 
                 </div>
 
@@ -981,17 +1691,21 @@
 
 
 
-        <!-- 05 -->
+        <!-- PROJECT 05 -->
 
-        <article class="project">
+        <article
+            class="project-card"
+            data-category="concept">
 
-            <div class="project-image project-thrift">
 
-                <span class="visual-label">
+            <div class="project-visual thrift">
+
+                <span class="visual-number">
                     05 / E-COMMERCE
                 </span>
 
-                <div class="fashion-card">
+
+                <div class="thrift-card">
 
                     <small>
                         NEPALI
@@ -1010,28 +1724,47 @@
             </div>
 
 
-            <div class="project-info">
+            <div class="project-details">
 
-                <div class="project-number">
-                    <span>05</span>
-                    <span>2026</span>
+                <div class="project-meta">
+
+                    <span>
+                        05
+                    </span>
+
+                    <span>
+                        2026
+                    </span>
+
                 </div>
+
 
                 <h3>
                     Nepali Thrift
                 </h3>
 
+
                 <p>
-                    A social-commerce concept for affordable
-                    fashion with Kathmandu Valley delivery,
-                    local selling and COD.
+
+                    Social-commerce concept for affordable
+                    fashion with local delivery and COD.
+
                 </p>
 
-                <div class="tags">
 
-                    <span>E-Commerce</span>
-                    <span>Instagram</span>
-                    <span>Branding</span>
+                <div class="project-tags">
+
+                    <span>
+                        E-Commerce
+                    </span>
+
+                    <span>
+                        Branding
+                    </span>
+
+                    <span>
+                        Social
+                    </span>
 
                 </div>
 
@@ -1041,58 +1774,86 @@
 
 
 
-        <!-- 06 -->
+        <!-- PROJECT 06 -->
 
-        <article class="project">
+        <article
+            class="project-card"
+            data-category="python">
 
-            <div class="project-image project-accounting">
 
-                <span class="visual-label">
-                    06 / BUSINESS
+            <div class="project-visual python-project">
+
+                <span class="visual-number">
+                    06 / PYTHON
                 </span>
 
-                <div class="accounting-screen">
 
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div class="python-logo">
+                    Py
+                </div>
+
+
+                <div class="python-lines">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
 
                 </div>
 
-                <strong>
-                    BUSINESS
+
+                <div class="visual-title small">
+                    PYTHON
                     <br>
-                    MANAGER
-                </strong>
+                    LAB
+                </div>
 
             </div>
 
 
-            <div class="project-info">
+            <div class="project-details">
 
-                <div class="project-number">
-                    <span>06</span>
-                    <span>2026</span>
+                <div class="project-meta">
+
+                    <span>
+                        06
+                    </span>
+
+                    <span>
+                        EXPERIMENTS
+                    </span>
+
                 </div>
+
 
                 <h3>
-                    Business Manager
+                    Python Mini Projects
                 </h3>
 
+
                 <p>
-                    A concept for a simple accounting and
-                    business management interface covering
-                    sales, expenses, records and reports.
+
+                    A collection of small Python programs
+                    and utilities created while learning
+                    programming fundamentals.
+
                 </p>
 
-                <div class="tags">
 
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>Accounting</span>
+                <div class="project-tags">
+
+                    <span>
+                        Python
+                    </span>
+
+                    <span>
+                        Logic
+                    </span>
+
+                    <span>
+                        CLI
+                    </span>
 
                 </div>
 
@@ -1102,51 +1863,157 @@
 
 
 
-        <!-- 07 -->
+        <!-- PROJECT 07 -->
 
-        <article class="project">
+        <article
+            class="project-card"
+            data-category="game">
 
-            <div class="project-image project-bubble">
 
-                <span class="visual-label">
-                    07 / GAME
+            <div class="project-visual roblox">
+
+                <span class="visual-number">
+                    07 / GAME DEV
                 </span>
 
-                <div class="bubble bubble-a"></div>
-                <div class="bubble bubble-b"></div>
-                <div class="bubble bubble-c"></div>
 
-                <strong>
+                <div class="roblox-cube">
+
+                    <span>R</span>
+
+                </div>
+
+
+                <div class="visual-title small">
+                    ROBLOX
+                    <br>
+                    LAB
+                </div>
+
+            </div>
+
+
+            <div class="project-details">
+
+                <div class="project-meta">
+
+                    <span>
+                        07
+                    </span>
+
+                    <span>
+                        LEARNING
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Roblox Experiments
+                </h3>
+
+
+                <p>
+
+                    Beginner experiments in Roblox Studio
+                    exploring Luau scripting, game mechanics,
+                    UI and interactive systems.
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>
+                        Roblox Studio
+                    </span>
+
+                    <span>
+                        Luau
+                    </span>
+
+                    <span>
+                        Game Dev
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 08 -->
+
+        <article
+            class="project-card"
+            data-category="game">
+
+
+            <div class="project-visual bubble">
+
+                <span class="visual-number">
+                    08 / GAME
+                </span>
+
+
+                <div class="bubble-one"></div>
+                <div class="bubble-two"></div>
+                <div class="bubble-three"></div>
+
+
+                <div class="visual-title small">
                     BUBBLE
                     <br>
                     POP
-                </strong>
+                </div>
 
             </div>
 
 
-            <div class="project-info">
+            <div class="project-details">
 
-                <div class="project-number">
-                    <span>07</span>
-                    <span>2026</span>
+                <div class="project-meta">
+
+                    <span>
+                        08
+                    </span>
+
+                    <span>
+                        2026
+                    </span>
+
                 </div>
+
 
                 <h3>
                     Bubble Pop
                 </h3>
 
+
                 <p>
+
                     Fast-paced browser game with streaks,
-                    score tracking, perks and a polished
-                    start menu.
+                    score tracking, perks and animated
+                    gameplay.
+
                 </p>
 
-                <div class="tags">
 
-                    <span>JavaScript</span>
-                    <span>Animation</span>
-                    <span>Game Design</span>
+                <div class="project-tags">
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                    <span>
+                        Animation
+                    </span>
+
+                    <span>
+                        Game Design
+                    </span>
 
                 </div>
 
@@ -1156,57 +2023,81 @@
 
 
 
-        <!-- 08 -->
+        <!-- PROJECT 09 -->
 
-        <article class="project">
+        <article
+            class="project-card"
+            data-category="concept">
 
-            <div class="project-image project-cinema">
 
-                <span class="visual-label">
-                    08 / UI CONCEPT
+            <div class="project-visual accounting">
+
+                <span class="visual-number">
+                    09 / BUSINESS
                 </span>
 
-                <div class="cinema-card">
 
-                    <span>
-                        WATCH
-                    </span>
+                <div class="accounting-screen">
 
-                    <strong>
-                        CINEMA
-                    </strong>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
 
-                    <small>
-                        MOVIES · SERIES · DISCOVER
-                    </small>
+                </div>
 
+
+                <div class="visual-title small">
+                    BUSINESS
+                    <br>
+                    MANAGER
                 </div>
 
             </div>
 
 
-            <div class="project-info">
+            <div class="project-details">
 
-                <div class="project-number">
-                    <span>08</span>
-                    <span>2026</span>
+                <div class="project-meta">
+
+                    <span>
+                        09
+                    </span>
+
+                    <span>
+                        2026
+                    </span>
+
                 </div>
 
+
                 <h3>
-                    Cinema UI
+                    Business Manager
                 </h3>
 
+
                 <p>
-                    Streaming platform interface concept
-                    focused on visual discovery, categories
-                    and responsive layouts.
+
+                    A simple business management concept
+                    for sales, expenses, records and
+                    reports.
+
                 </p>
 
-                <div class="tags">
 
-                    <span>UI/UX</span>
-                    <span>CSS</span>
-                    <span>Responsive</span>
+                <div class="project-tags">
+
+                    <span>
+                        HTML
+                    </span>
+
+                    <span>
+                        CSS
+                    </span>
+
+                    <span>
+                        JavaScript
+                    </span>
 
                 </div>
 
@@ -1220,111 +2111,325 @@
 
 
 
-<!-- ================= GAME ================= -->
+<!-- ================= NEON DODGE ================= -->
 
-<section class="section game-section"
-         id="game">
+<section
+    class="section game-section"
+    id="game">
+
 
     <div class="section-label">
-        05 / VISITOR GAME
+        06 / PLAYGROUND
     </div>
 
 
-    <div class="game-intro">
+    <div class="game-heading">
 
-        <h2>
-            Think you have
-            <em>fast reactions?</em>
-        </h2>
+        <div>
 
-        <p>
-            Click the target as many times as possible
-            before the 15-second timer ends.
-        </p>
+            <h2>
 
-    </div>
+                NEON
+                <em>DODGE.</em>
 
+            </h2>
 
-    <div class="reaction-game">
+            <p>
 
-        <div class="game-top">
+                A tiny game I built for visitors.
+                Survive as long as possible.
 
-            <div>
-
-                <span>SCORE</span>
-
-                <strong id="score">
-                    0
-                </strong>
-
-            </div>
-
-
-            <div>
-
-                <span>TIME</span>
-
-                <strong id="time">
-                    15
-                </strong>
-
-            </div>
-
-
-            <div>
-
-                <span>BEST</span>
-
-                <strong id="best">
-                    0
-                </strong>
-
-            </div>
+            </p>
 
         </div>
 
 
-        <div class="game-arena"
-             id="gameArena">
+        <div class="game-controls-info">
 
-            <div class="game-message"
-                 id="gameMessage">
+            <span>
+                MOVE
+            </span>
 
-                <strong>
-                    REACTION TEST
-                </strong>
+            <b>
+                ← ↑ ↓ →
+            </b>
+
+        </div>
+
+    </div>
+
+
+    <div class="neon-game">
+
+
+        <div class="game-header">
+
+            <div>
 
                 <span>
-                    Hit START and click the target.
+                    SCORE
                 </span>
+
+                <strong id="gameScore">
+                    0
+                </strong>
 
             </div>
 
 
-            <button
-                id="target"
-                class="target">
-            </button>
+            <div>
+
+                <span>
+                    LEVEL
+                </span>
+
+                <strong id="gameLevel">
+                    1
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    LIVES
+                </span>
+
+                <strong id="gameLives">
+                    3
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    BEST
+                </span>
+
+                <strong id="gameBest">
+                    0
+                </strong>
+
+            </div>
 
         </div>
 
 
-        <div class="game-controls">
+        <div
+            class="game-canvas-wrapper"
+            id="gameWrapper">
+
+
+            <canvas
+                id="neonCanvas">
+            </canvas>
+
+
+            <div
+                class="game-overlay"
+                id="gameOverlay">
+
+
+                <div class="game-start-card">
+
+                    <div class="game-logo">
+                        N
+                    </div>
+
+
+                    <h3>
+                        NEON DODGE
+                    </h3>
+
+
+                    <p>
+
+                        Dodge the falling blocks.
+                        Survive. Score. Repeat.
+
+                    </p>
+
+
+                    <button
+                        id="startNeonGame">
+
+                        START GAME
+
+                    </button>
+
+
+                    <small>
+
+                        Desktop: Arrow Keys / WASD
+                        <br>
+                        Mobile: Touch the screen
+
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="game-over"
+                id="gameOver">
+
+
+                <span>
+                    RUN ENDED
+                </span>
+
+
+                <strong id="finalScore">
+                    0
+                </strong>
+
+
+                <p>
+                    POINTS
+                </p>
+
+
+                <button
+                    id="restartNeonGame">
+
+                    PLAY AGAIN
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="game-footer">
+
+            <span id="gameStatus">
+                READY
+            </span>
+
 
             <button
-                class="game-start"
-                id="startGame">
+                id="soundToggle">
 
-                START GAME
+                SOUND: ON
 
             </button>
 
+        </div>
 
-            <span id="gameStatus">
+    </div>
 
-                15 seconds · tap the target
+</section>
 
-            </span>
+
+
+<!-- ================= LEARNING ================= -->
+
+<section
+    class="section learning-section">
+
+
+    <div class="section-label">
+        07 / CURRENTLY LEARNING
+    </div>
+
+
+    <div class="learning-layout">
+
+
+        <div>
+
+            <h2>
+
+                Still
+                <em>learning.</em>
+
+            </h2>
+
+            <p>
+
+                Technology changes quickly. These are the
+                areas I'm currently spending time exploring.
+
+            </p>
+
+        </div>
+
+
+        <div class="learning-cards">
+
+
+            <div class="learning-card">
+
+                <span>
+                    01
+                </span>
+
+                <strong>
+                    React
+                </strong>
+
+                <small>
+                    Frontend
+                </small>
+
+            </div>
+
+
+            <div class="learning-card">
+
+                <span>
+                    02
+                </span>
+
+                <strong>
+                    Luau
+                </strong>
+
+                <small>
+                    Roblox
+                </small>
+
+            </div>
+
+
+            <div class="learning-card">
+
+                <span>
+                    03
+                </span>
+
+                <strong>
+                    APIs
+                </strong>
+
+                <small>
+                    Web Development
+                </small>
+
+            </div>
+
+
+            <div class="learning-card">
+
+                <span>
+                    04
+                </span>
+
+                <strong>
+                    Git
+                </strong>
+
+                <small>
+                    Version Control
+                </small>
+
+            </div>
 
         </div>
 
@@ -1336,40 +2441,78 @@
 
 <!-- ================= CONTACT ================= -->
 
-<section class="section contact"
-         id="contact">
+<section
+    class="section contact-section"
+    id="contact">
+
 
     <div class="contact-box">
 
+
         <div class="section-label">
-            06 / CONTACT
+            08 / CONTACT
         </div>
 
 
         <h2>
 
-            Let's create
+            Have an idea?
             <br>
 
-            <em>something cool.</em>
+            <em>Let's build it.</em>
 
         </h2>
 
 
         <p>
-            Have a project idea, collaboration or
-            just want to talk about technology?
+
+            I'm always interested in learning, building
+            and working on interesting digital projects.
+
         </p>
 
 
-        <a href="mailto:panthiprabin91@gmail.com"
-           class="email">
+        <a
+            href="mailto:panthiprabin91@gmail.com"
+            class="contact-email">
 
             panthiprabin91@gmail.com
 
-            <span>↗</span>
+            <span>
+                ↗
+            </span>
 
         </a>
+
+
+        <div class="contact-socials">
+
+            <a
+                href="https://github.com/"
+                target="_blank">
+
+                GitHub ↗
+
+            </a>
+
+
+            <a
+                href="https://www.linkedin.com/"
+                target="_blank">
+
+                LinkedIn ↗
+
+            </a>
+
+
+            <a
+                href="mailto:panthiprabin91@gmail.com">
+
+                Email ↗
+
+            </a>
+
+        </div>
 
     </div>
 
@@ -1384,32 +2527,48 @@
 
 <footer>
 
+    <div>
+
+        <strong>
+            PRABEEN PANTHI
+        </strong>
+
+        <span>
+            Student Developer · Kathmandu
+        </span>
+
+    </div>
+
+
     <span>
+
         © <span id="year"></span>
-        PRABEEN PANTHI
-    </span>
+        ALL RIGHTS RESERVED.
 
-
-    <span>
-        KATHMANDU · NEPAL
     </span>
 
 
     <a href="#home">
+
         BACK TO TOP ↑
+
     </a>
 
 </footer>
 
 
+<!-- TOP BUTTON -->
+
 <button
-    id="topButton"
-    class="top-button">
+    class="top-button"
+    id="topButton">
 
     ↑
 
 </button>
 
+
+<!-- JAVASCRIPT -->
 
 <script src="script.js"></script>
 
