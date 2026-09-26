@@ -2,72 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <title>Prabeen Panthi | Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Prabeen Panthi — BSc IT student, web developer, Python learner and beginner Roblox game developer.">
 
-    <meta
-        name="description"
-        content="Prabin Panthi — BSc IT student, developer and builder creating web applications, games and digital projects."
-    >
-
-    <meta
-        name="author"
-        content="Prabin Panthi"
-    >
-
-    <title>Prabin Panthi | Developer</title>
-
-    <!-- Developer favicon -->
-    <link
-        rel="icon"
-        type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b1220'/%3E%3Cpath d='M42 28L20 50l22 22M58 28l22 22-22 22' fill='none' stroke='%2300c8ff' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
-    >
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230b1220'/%3E%3Cpath d='M28 25h44v14H44v8h22v14H44v14H28z' fill='%2360a5fa'/%3E%3C/svg%3E">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icons -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Loading screen -->
-    <div class="loader" id="loader">
-        <div class="loader-code">
-            <span>&lt;</span>
-            <span>/</span>
-            <span>&gt;</span>
-        </div>
-        <p>loading portfolio...</p>
-    </div>
-
     <!-- Background -->
     <div class="background-grid"></div>
-    <div class="background-glow glow-one"></div>
-    <div class="background-glow glow-two"></div>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
 
     <!-- Navigation -->
-    <header class="navbar" id="navbar">
-
+    <header class="navbar">
         <a href="#home" class="logo">
-            <span class="logo-symbol">&lt;/&gt;</span>
-            <span>Prabin<span class="logo-dot">.</span></span>
+            <span class="logo-bracket">&lt;</span>
+            <span>PP</span>
+            <span class="logo-bracket">/&gt;</span>
         </a>
 
         <nav class="nav-links" id="navLinks">
@@ -80,122 +46,77 @@
         </nav>
 
         <div class="nav-actions">
-
-            <button
-                class="theme-toggle"
-                id="themeToggle"
-                aria-label="Toggle dark and light mode"
-                title="Toggle theme"
-            >
+            <button id="themeToggle" class="icon-button" aria-label="Toggle theme">
                 <i class="fa-solid fa-sun"></i>
             </button>
 
-            <a
-                href="https://github.com/prabeen43"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="nav-github"
-                aria-label="GitHub"
-            >
-                <i class="fa-brands fa-github"></i>
-            </a>
-
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                aria-label="Open navigation menu"
-            >
+            <button id="menuToggle" class="menu-button" aria-label="Open menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
-
         </div>
-
     </header>
-
 
     <main>
 
         <!-- HERO -->
-        <section class="hero section" id="home">
+        <section id="home" class="hero section">
 
             <div class="hero-content reveal">
 
                 <div class="availability">
                     <span class="status-dot"></span>
-                    <span>Available for learning & building</span>
+                    Available for learning & projects
                 </div>
 
                 <p class="hero-small">
-                    &lt;hello_world /&gt;
+                    HELLO, I'M
                 </p>
 
                 <h1>
-                    Hi, I'm
-                    <span class="gradient-text">Prabin Panthi.</span>
+                    Prabeen <span>Panthi</span>
                 </h1>
 
-                <h2>
-                    I build things for the web.
-                </h2>
+                <div class="typing-wrapper">
+                    <span class="mono">&gt; </span>
+                    <span id="typingText"></span>
+                    <span class="cursor">|</span>
+                </div>
 
                 <p class="hero-description">
-                    BSc IT student, developer and builder from Nepal.
-                    I create websites, interactive applications and
-                    experiments while exploring AI, Python and game development.
+                    A BSc IT student from Kathmandu who enjoys building websites,
+                    experimenting with Python, creating small games and learning
+                    new technologies.
                 </p>
 
                 <div class="hero-buttons">
-
-                    <a href="#projects" class="btn btn-primary">
+                    <a href="#projects" class="primary-button">
+                        <i class="fa-solid fa-code"></i>
                         View My Work
+                    </a>
+
+                    <a href="#contact" class="secondary-button">
+                        Contact Me
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-
-                    <a
-                        href="Prabin-Panthi-Developer-CV-v2.pdf"
-                        download
-                        class="btn btn-secondary"
-                    >
-                        <i class="fa-solid fa-download"></i>
-                        Download CV
-                    </a>
-
                 </div>
 
                 <div class="social-row">
-
-                    <a
-                        href="https://github.com/prabeen43"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="GitHub"
-                    >
+                    <a href="https://github.com/prabeen43" target="_blank" rel="noopener" aria-label="GitHub">
                         <i class="fa-brands fa-github"></i>
                     </a>
 
-                    <a
-                        href="https://www.instagram.com/_prabeen.js_/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Instagram"
-                    >
+                    <a href="https://instagram.com/_prabeen.js_" target="_blank" rel="noopener" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
 
-                    <a
-                        href="mailto:panthiprabin91@gmail.com"
-                        title="Email"
-                    >
+                    <a href="mailto:panthiprabin91@gmail.com" aria-label="Email">
                         <i class="fa-solid fa-envelope"></i>
                     </a>
-
                 </div>
 
             </div>
 
-
             <div class="hero-code-card reveal">
-
                 <div class="code-window">
 
                     <div class="window-top">
@@ -205,833 +126,666 @@
                             <span></span>
                         </div>
 
-                        <div class="window-title">
-                            prabin.js
-                        </div>
-
-                        <div></div>
+                        <span class="window-title">prabeen.js</span>
                     </div>
 
-                    <div class="code-content">
-
-                        <div class="line">
+                    <div class="code-body">
+                        <div>
                             <span class="line-number">01</span>
-                            <span>
-                                <span class="keyword">const</span>
-                                <span class="variable">developer</span>
-                                =
-                                {
-                            </span>
+                            <span class="purple">const</span>
+                            <span class="blue">developer</span> =
+                            <span class="yellow">{</span>
                         </div>
 
-                        <div class="line">
+                        <div>
                             <span class="line-number">02</span>
-                            <span class="indent">
-                                name:
-                                <span class="string">'Prabin Panthi'</span>,
-                            </span>
+                            &nbsp;&nbsp;name:
+                            <span class="green">'Prabeen Panthi'</span>,
                         </div>
 
-                        <div class="line">
+                        <div>
                             <span class="line-number">03</span>
-                            <span class="indent">
-                                role:
-                                <span class="string">'Developer'</span>,
-                            </span>
+                            &nbsp;&nbsp;location:
+                            <span class="green">'Kathmandu, Nepal'</span>,
                         </div>
 
-                        <div class="line">
+                        <div>
                             <span class="line-number">04</span>
-                            <span class="indent">
-                                education:
-                                <span class="string">'BSc IT'</span>,
-                            </span>
+                            &nbsp;&nbsp;education:
+                            <span class="green">'BSc IT'</span>,
                         </div>
 
-                        <div class="line">
+                        <div>
                             <span class="line-number">05</span>
-                            <span class="indent">
-                                location:
-                                <span class="string">'Nepal'</span>,
-                            </span>
+                            &nbsp;&nbsp;focus:
+                            <span class="yellow">[</span>
                         </div>
 
-                        <div class="line">
+                        <div>
                             <span class="line-number">06</span>
-                            <span class="indent">
-                                skills:
-                                [
-                            </span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="green">'Web Development'</span>,
                         </div>
 
-                        <div class="line">
+                        <div>
                             <span class="line-number">07</span>
-                            <span class="double-indent">
-                                <span class="string">'HTML'</span>,
-                                <span class="string">'CSS'</span>,
-                            </span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="green">'Python'</span>,
                         </div>
 
-                        <div class="line">
+                        <div>
                             <span class="line-number">08</span>
-                            <span class="double-indent">
-                                <span class="string">'JavaScript'</span>,
-                                <span class="string">'Python'</span>,
-                            </span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="green">'Game Development'</span>
                         </div>
 
-                        <div class="line">
+                        <div>
                             <span class="line-number">09</span>
-                            <span class="double-indent">
-                                <span class="string">'C'</span>,
-                                <span class="string">'Git'</span>
-                            </span>
+                            &nbsp;&nbsp;<span class="yellow">]</span>
                         </div>
 
-                        <div class="line">
+                        <div>
                             <span class="line-number">10</span>
-                            <span class="indent">
-                                ],
-                            </span>
+                            <span class="yellow">}</span>;
                         </div>
-
-                        <div class="line">
-                            <span class="line-number">11</span>
-                            <span class="indent">
-                                learning:
-                                <span class="string">'Always'</span>
-                            </span>
-                        </div>
-
-                        <div class="line">
-                            <span class="line-number">12</span>
-                            <span>
-                                };
-                            </span>
-                        </div>
-
                     </div>
-
                 </div>
-
             </div>
 
         </section>
-
-
-        <!-- STATS -->
-        <section class="stats-section">
-
-            <div class="stats-container reveal">
-
-                <div class="stat">
-                    <strong>03+</strong>
-                    <span>Featured Projects</span>
-                </div>
-
-                <div class="stat">
-                    <strong>05+</strong>
-                    <span>Technologies</span>
-                </div>
-
-                <div class="stat">
-                    <strong>2026</strong>
-                    <span>BSc IT Journey</span>
-                </div>
-
-                <div class="stat">
-                    <strong>∞</strong>
-                    <span>Things to Learn</span>
-                </div>
-
-            </div>
-
-        </section>
-
 
         <!-- ABOUT -->
-        <section class="section about-section" id="about">
-
+        <section id="about" class="section">
             <div class="section-heading reveal">
-                <span class="section-number">01.</span>
-                <h2>About Me</h2>
-                <div class="heading-line"></div>
+                <span class="section-number">01</span>
+                <div>
+                    <p class="eyebrow">ABOUT ME</p>
+                    <h2>Building things while <span>learning.</span></h2>
+                </div>
             </div>
 
             <div class="about-grid">
 
                 <div class="about-text reveal">
-
                     <p>
-                        I'm <strong>Prabin Panthi</strong>, a BSc IT student
-                        from Kathmandu, Nepal who enjoys turning ideas into
-                        working digital projects.
+                        I'm <strong>Prabeen Panthi</strong>, an IT student and beginner
+                        developer based in Kathmandu, Nepal.
                     </p>
 
                     <p>
-                        My main focus is frontend and web development, but I
-                        also experiment with Python, C, AI-powered projects
-                        and beginner game development.
+                        I enjoy turning ideas into practical digital projects.
+                        Most of my projects start as experiments where I learn
+                        something new and gradually turn it into something usable.
                     </p>
 
                     <p>
-                        I am still growing as a developer, so I enjoy learning
-                        by actually building things rather than only studying
-                        theory.
+                        My current interests include frontend development,
+                        JavaScript, Python, game development and exploring
+                        new technologies.
                     </p>
 
-                    <div class="terminal-mini">
-
-                        <div class="terminal-top">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                    <div class="about-stats">
+                        <div>
+                            <strong>2026</strong>
+                            <span>BSc IT Started</span>
                         </div>
 
-                        <div class="terminal-body">
-                            <p>
-                                <span class="terminal-green">prabin@portfolio</span>:~$
-                                whoami
-                            </p>
-
-                            <p class="terminal-output">
-                                student + developer + builder
-                            </p>
-
-                            <p>
-                                <span class="terminal-green">prabin@portfolio</span>:~$
-                                <span class="cursor"></span>
-                            </p>
+                        <div>
+                            <strong>3+</strong>
+                            <span>Project Areas</span>
                         </div>
 
+                        <div>
+                            <strong>∞</strong>
+                            <span>Things to Learn</span>
+                        </div>
                     </div>
-
                 </div>
 
-
-                <div class="about-cards reveal">
-
-                    <div class="info-card">
-
-                        <div class="info-icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-
-                        <div>
-                            <h3>Web Development</h3>
-                            <p>
-                                Building responsive websites and interactive
-                                browser applications.
-                            </p>
-                        </div>
-
+                <div class="terminal-card reveal">
+                    <div class="terminal-header">
+                        <span>terminal</span>
+                        <span>● ● ●</span>
                     </div>
 
+                    <div class="terminal-content">
+                        <p><span class="terminal-green">prabeen@portfolio</span>:~$ whoami</p>
+                        <p class="terminal-output">student_developer</p>
 
-                    <div class="info-card">
+                        <p><span class="terminal-green">prabeen@portfolio</span>:~$ interests</p>
+                        <p class="terminal-output">
+                            web • python • javascript • games
+                        </p>
 
-                        <div class="info-icon">
-                            <i class="fa-solid fa-brain"></i>
-                        </div>
-
-                        <div>
-                            <h3>AI & Experiments</h3>
-                            <p>
-                                Exploring AI concepts and integrating them
-                                into personal projects.
-                            </p>
-                        </div>
-
+                        <p><span class="terminal-green">prabeen@portfolio</span>:~$ status</p>
+                        <p class="terminal-output">
+                            learning_and_building<span class="blink">_</span>
+                        </p>
                     </div>
-
-
-                    <div class="info-card">
-
-                        <div class="info-icon">
-                            <i class="fa-solid fa-gamepad"></i>
-                        </div>
-
-                        <div>
-                            <h3>Game Development</h3>
-                            <p>
-                                Learning Roblox Studio and experimenting
-                                with game development.
-                            </p>
-                        </div>
-
-                    </div>
-
                 </div>
 
             </div>
-
         </section>
-
 
         <!-- SKILLS -->
-        <section class="section skills-section" id="skills">
-
+        <section id="skills" class="section">
             <div class="section-heading reveal">
-                <span class="section-number">02.</span>
-                <h2>Tech Stack</h2>
-                <div class="heading-line"></div>
+                <span class="section-number">02</span>
+                <div>
+                    <p class="eyebrow">SKILLS</p>
+                    <h2>Tools I <span>work with.</span></h2>
+                </div>
             </div>
 
-            <p class="section-intro reveal">
-                Technologies and tools I use or am currently learning.
-            </p>
+            <div class="skills-grid">
 
-
-            <div class="skills-grid reveal">
-
-                <div class="skill-card">
-                    <div class="skill-icon html-icon">
-                        <i class="fa-brands fa-html5"></i>
-                    </div>
-                    <h3>HTML</h3>
-                    <p>Semantic & structured web pages</p>
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+                    <h3>HTML5</h3>
+                    <p>Semantic structure and modern web pages.</p>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon css-icon">
-                        <i class="fa-brands fa-css3-alt"></i>
-                    </div>
-                    <h3>CSS</h3>
-                    <p>Responsive & modern interfaces</p>
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+                    <h3>CSS3</h3>
+                    <p>Responsive layouts, animations and UI design.</p>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon js-icon">
-                        <i class="fa-brands fa-js"></i>
-                    </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
                     <h3>JavaScript</h3>
-                    <p>Interactive web experiences</p>
+                    <p>Interactive websites and browser applications.</p>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon python-icon">
-                        <i class="fa-brands fa-python"></i>
-                    </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
                     <h3>Python</h3>
-                    <p>Programming & small projects</p>
+                    <p>Small utilities, experiments and beginner projects.</p>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon c-icon">
-                        <span>C</span>
-                    </div>
-                    <h3>C</h3>
-                    <p>Programming fundamentals</p>
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+                    <h3>SQL / DBMS</h3>
+                    <p>Learning databases, queries and data management.</p>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon git-icon">
-                        <i class="fa-brands fa-github"></i>
-                    </div>
-                    <h3>Git & GitHub</h3>
-                    <p>Version control & projects</p>
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fa-solid fa-gamepad"></i></div>
+                    <h3>Game Development</h3>
+                    <p>Browser games and beginner Roblox development.</p>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon game-icon">
-                        <i class="fa-solid fa-gamepad"></i>
-                    </div>
-                    <h3>Roblox Studio</h3>
-                    <p>Beginner game development</p>
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fa-brands fa-github"></i></div>
+                    <h3>GitHub</h3>
+                    <p>Version control and publishing development projects.</p>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon netlify-icon">
-                        <i class="fa-solid fa-globe"></i>
-                    </div>
-                    <h3>Netlify</h3>
-                    <p>Website deployment</p>
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h3>Responsive Design</h3>
+                    <p>Interfaces designed for phones, tablets and desktops.</p>
                 </div>
 
             </div>
-
         </section>
-
 
         <!-- PROJECTS -->
-        <section class="section projects-section" id="projects">
-
+        <section id="projects" class="section">
             <div class="section-heading reveal">
-                <span class="section-number">03.</span>
-                <h2>Selected Projects</h2>
-                <div class="heading-line"></div>
+                <span class="section-number">03</span>
+                <div>
+                    <p class="eyebrow">PROJECTS</p>
+                    <h2>Things I've <span>built.</span></h2>
+                </div>
             </div>
 
-            <p class="section-intro reveal">
-                A few things I've built while learning and experimenting.
-            </p>
+            <div class="projects-grid">
 
+                <!-- Jyotish -->
+                <article class="project-card featured-project reveal">
 
-            <!-- Jyotish -->
-            <article class="project-feature reveal">
+                    <div class="project-image">
+                        <img src="images/Jyotish-AI.png" alt="Jyotish AI project preview">
 
-                <div class="project-image">
-
-                    <img
-                        src="images/Jyotish-AI.png"
-                        alt="Jyotish AI project preview"
-                    >
-
-                    <div class="image-overlay">
-                        <span>
-                            <i class="fa-solid fa-sparkles"></i>
-                            Featured Project
-                        </span>
+                        <div class="project-badge">
+                            <i class="fa-solid fa-star"></i>
+                            Featured
+                        </div>
                     </div>
 
-                </div>
-
-
-                <div class="project-info">
-
-                    <span class="project-label">
-                        FEATURED PROJECT
-                    </span>
-
-                    <h3>Jyotish AI</h3>
-
-                    <p>
-                        A personal astrology and Jyotish web application
-                        designed to generate and present astrology-related
-                        information through a modern interactive interface.
-                    </p>
-
-                    <div class="tech-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>AI</span>
-                    </div>
-
-                    <div class="project-links">
-
-                        <a
-                            href="https://github.com/prabeen43"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                        >
-                            <i class="fa-brands fa-github"></i>
-                            View on GitHub
-                        </a>
-
-                        <a
-                            href="https://prabin67.com.np"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link secondary-link"
-                        >
-                            Live Site
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- Balloon Blitz -->
-            <article class="project-feature reverse reveal">
-
-                <div class="project-video">
-
-                    <video
-                        src="videos/balloon-blitz.mp4"
-                        autoplay
-                        muted
-                        loop
-                        playsinline
-                        controls
-                        preload="metadata"
-                        title="Balloon Blitz gameplay"
-                    >
-                        Your browser does not support the video element.
-                    </video>
-
-                    <div class="video-label">
-                        <i class="fa-solid fa-circle-play"></i>
-                        Gameplay Preview
-                    </div>
-
-                </div>
-
-
-                <div class="project-info">
-
-                    <span class="project-label">
-                        GAME PROJECT
-                    </span>
-
-                    <h3>Balloon Blitz</h3>
-
-                    <p>
-                        A browser-based interactive game built to experiment
-                        with JavaScript game logic, animation, scoring,
-                        interaction and responsive design.
-                    </p>
-
-                    <div class="tech-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Game Development</span>
-                    </div>
-
-                    <div class="project-links">
-
-                        <a
-                            href="https://github.com/prabeen43"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                        >
-                            <i class="fa-brands fa-github"></i>
-                            View on GitHub
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- Portfolio -->
-            <article class="simple-project reveal">
-
-                <div class="simple-project-icon">
-                    <i class="fa-solid fa-laptop-code"></i>
-                </div>
-
-                <div class="simple-project-content">
-
-                    <div class="simple-project-heading">
-                        <div>
-                            <span class="project-label">
-                                PERSONAL PROJECT
-                            </span>
-
-                            <h3>Developer Portfolio</h3>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span>WEB APP</span>
+                            <span>2026</span>
                         </div>
 
-                        <a
-                            href="https://github.com/prabeen43"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Portfolio GitHub"
-                        >
-                            <i class="fa-brands fa-github"></i>
+                        <h3>Jyotish AI</h3>
+
+                        <p>
+                            A personal astrology and Jyotish chart generator
+                            designed to make traditional chart information easier
+                            to explore through a modern interface.
+                        </p>
+
+                        <div class="tech-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>AI</span>
+                        </div>
+
+                        <a href="https://github.com/prabeen43/Jyotish-AI"
+                           target="_blank"
+                           rel="noopener"
+                           class="project-link">
+                            View GitHub
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
+                </article>
 
-                    <p>
-                        A responsive personal developer website featuring
-                        projects, skills, education, social links and a
-                        downloadable CV.
-                    </p>
+                <!-- Balloon Blitz -->
+                <article class="project-card reveal">
 
-                    <div class="tech-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Netlify</span>
+                    <div class="project-video">
+                        <video
+                            src="videos/balloon-blitz.mp4"
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            preload="metadata">
+                        </video>
+
+                        <div class="video-label">
+                            GAMEPLAY
+                        </div>
                     </div>
 
-                </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span>GAME</span>
+                            <span>2026</span>
+                        </div>
 
-            </article>
+                        <h3>Balloon Blitz</h3>
 
+                        <p>
+                            A browser-based balloon popping game focused on
+                            fast interaction, score tracking and polished UI.
+                        </p>
 
-            <div class="github-more reveal">
+                        <div class="tech-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Game Logic</span>
+                        </div>
 
-                <p>
-                    More experiments and code are available on my GitHub.
-                </p>
+                        <a href="https://github.com/prabeen43/Balloon-Blitz"
+                           target="_blank"
+                           rel="noopener"
+                           class="project-link">
+                            View GitHub
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </article>
 
-                <a
-                    href="https://github.com/prabeen43"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-secondary"
-                >
-                    <i class="fa-brands fa-github"></i>
-                    Explore GitHub
-                </a>
+                <!-- Python -->
+                <article class="project-card reveal">
+
+                    <div class="project-icon-large">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span>PYTHON</span>
+                            <span>ONGOING</span>
+                        </div>
+
+                        <h3>Python Mini Projects</h3>
+
+                        <p>
+                            A collection of small Python programs and experiments
+                            created while learning programming fundamentals,
+                            logic and problem solving.
+                        </p>
+
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>Functions</span>
+                            <span>Logic</span>
+                            <span>Automation</span>
+                        </div>
+
+                        <span class="project-status">
+                            <i class="fa-solid fa-code"></i>
+                            Building & learning
+                        </span>
+                    </div>
+                </article>
+
+                <!-- Roblox -->
+                <article class="project-card reveal">
+
+                    <div class="project-icon-large roblox-icon">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span>GAME DEV</span>
+                            <span>LEARNING</span>
+                        </div>
+
+                        <h3>Roblox Game Development</h3>
+
+                        <p>
+                            Exploring Roblox Studio and beginner game development,
+                            including gameplay ideas, scripting and interactive
+                            mechanics.
+                        </p>
+
+                        <div class="tech-tags">
+                            <span>Roblox Studio</span>
+                            <span>Lua</span>
+                            <span>Game Design</span>
+                        </div>
+
+                        <span class="project-status">
+                            <i class="fa-solid fa-flask"></i>
+                            Experimental
+                        </span>
+                    </div>
+                </article>
+
+                <!-- Web Projects -->
+                <article class="project-card reveal">
+
+                    <div class="project-icon-large">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span>WEB DEVELOPMENT</span>
+                            <span>ONGOING</span>
+                        </div>
+
+                        <h3>Frontend Experiments</h3>
+
+                        <p>
+                            Small websites and interactive interfaces created to
+                            practice HTML, CSS, JavaScript, animations and responsive design.
+                        </p>
+
+                        <div class="tech-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>UI/UX</span>
+                        </div>
+
+                        <span class="project-status">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Experimenting
+                        </span>
+                    </div>
+                </article>
+
+                <!-- Future -->
+                <article class="project-card project-dashed reveal">
+
+                    <div class="project-icon-large">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span>NEXT PROJECT</span>
+                        </div>
+
+                        <h3>More coming soon</h3>
+
+                        <p>
+                            More experiments, applications and game projects will
+                            be added here as I continue learning.
+                        </p>
+
+                        <span class="project-status">
+                            <i class="fa-solid fa-hourglass-half"></i>
+                            In progress
+                        </span>
+                    </div>
+                </article>
 
             </div>
-
         </section>
 
-
         <!-- EDUCATION -->
-        <section class="section education-section" id="education">
-
+        <section id="education" class="section">
             <div class="section-heading reveal">
-                <span class="section-number">04.</span>
-                <h2>Education</h2>
-                <div class="heading-line"></div>
+                <span class="section-number">04</span>
+                <div>
+                    <p class="eyebrow">EDUCATION</p>
+                    <h2>My learning <span>journey.</span></h2>
+                </div>
             </div>
-
 
             <div class="timeline">
 
                 <div class="timeline-item reveal">
-
                     <div class="timeline-dot"></div>
 
                     <div class="timeline-card">
+                        <div class="timeline-date">2026 — PRESENT</div>
 
-                        <span class="timeline-date">
-                            2026 — Present
-                        </span>
+                        <div class="current-badge">
+                            <span></span>
+                            CURRENT
+                        </div>
 
-                        <h3>Techspire College</h3>
+                        <h3>BSc Information Technology</h3>
 
-                        <h4>Baneshwor, Kathmandu</h4>
+                        <h4>Techspire College</h4>
 
                         <p>
-                            Bachelor of Science in Information Technology
-                            (BSc IT).
+                            Baneshwor, Kathmandu
                         </p>
 
+                        <div class="education-tags">
+                            <span>BSc IT</span>
+                            <span>Technology</span>
+                            <span>Software</span>
+                        </div>
                     </div>
-
                 </div>
 
-
                 <div class="timeline-item reveal">
-
                     <div class="timeline-dot"></div>
 
                     <div class="timeline-card">
+                        <div class="timeline-date">HIGH SCHOOL</div>
 
-                        <span class="timeline-date">
-                            High School
-                        </span>
+                        <h3>Management + Computer Science</h3>
 
-                        <h3>NCCS Secondary School</h3>
-
-                        <h4>Paknajol, Kathmandu</h4>
+                        <h4>NCCS Secondary School</h4>
 
                         <p>
-                            Management stream with Computer Science major.
+                            Paknajol, Kathmandu
                         </p>
 
+                        <div class="education-tags">
+                            <span>Management</span>
+                            <span>Computer Science</span>
+                        </div>
                     </div>
-
                 </div>
 
-
                 <div class="timeline-item reveal">
-
                     <div class="timeline-dot"></div>
 
                     <div class="timeline-card">
+                        <div class="timeline-date">SCHOOL</div>
 
-                        <span class="timeline-date">
-                            School
-                        </span>
+                        <h3>Secondary Education</h3>
 
-                        <h3>Bagiswori Higher Secondary School</h3>
-
-                        <h4>Chyamashing, Bhaktapur</h4>
+                        <h4>Bagiswori Higher Secondary School</h4>
 
                         <p>
-                            School education.
+                            Chyamashing, Bhaktapur
                         </p>
-
                     </div>
-
                 </div>
 
             </div>
-
         </section>
-
-
-        <!-- CURRENTLY BUILDING -->
-        <section class="section building-section">
-
-            <div class="building-card reveal">
-
-                <div class="building-icon">
-                    <i class="fa-solid fa-terminal"></i>
-                </div>
-
-                <div>
-
-                    <span class="project-label">
-                        CURRENTLY BUILDING
-                    </span>
-
-                    <h2>Learning. Building. Improving.</h2>
-
-                    <p>
-                        Currently exploring JavaScript, Python, AI concepts,
-                        responsive frontend development and Roblox game
-                        development.
-                    </p>
-
-                </div>
-
-                <div class="building-code">
-                    <span>while</span> (learning) {
-                    <br>
-                    &nbsp;&nbsp;build();
-                    <br>
-                    &nbsp;&nbsp;improve();
-                    <br>
-                    }
-                </div>
-
-            </div>
-
-        </section>
-
 
         <!-- CONTACT -->
-        <section class="section contact-section" id="contact">
+        <section id="contact" class="contact-section section">
 
-            <div class="contact-container reveal">
-
-                <span class="section-number">
-                    05. What's next?
-                </span>
+            <div class="contact-heading reveal">
+                <p class="eyebrow">05 — CONTACT</p>
 
                 <h2>
-                    Let's build something.
+                    Let's build something
+                    <span>interesting.</span>
                 </h2>
 
                 <p>
-                    Whether it's a website, an experiment, a game or a new
-                    idea, I'm always interested in building and learning.
+                    Have a project idea, collaboration opportunity, or simply
+                    want to connect? You can find me through the links below.
                 </p>
+            </div>
 
-                <a
-                    href="mailto:panthiprabin91@gmail.com"
-                    class="btn btn-primary contact-button"
-                >
-                    <i class="fa-solid fa-paper-plane"></i>
-                    Say Hello
+            <div class="contact-grid">
+
+                <a href="mailto:panthiprabin91@gmail.com" class="contact-card reveal">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div>
+                        <span>Email</span>
+                        <strong>panthiprabin91@gmail.com</strong>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
                 </a>
 
+                <a href="https://github.com/prabeen43"
+                   target="_blank"
+                   rel="noopener"
+                   class="contact-card reveal">
 
-                <div class="contact-socials">
-
-                    <a
-                        href="https://github.com/prabeen43"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <div class="contact-icon">
                         <i class="fa-brands fa-github"></i>
-                        GitHub
-                    </a>
+                    </div>
 
-                    <a
-                        href="https://www.instagram.com/_prabeen.js_/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <div>
+                        <span>GitHub</span>
+                        <strong>github.com/prabeen43</strong>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+                </a>
+
+                <a href="https://instagram.com/_prabeen.js_"
+                   target="_blank"
+                   rel="noopener"
+                   class="contact-card reveal">
+
+                    <div class="contact-icon">
                         <i class="fa-brands fa-instagram"></i>
-                        Instagram
-                    </a>
+                    </div>
 
-                    <a href="mailto:panthiprabin91@gmail.com">
-                        <i class="fa-solid fa-envelope"></i>
-                        Email
-                    </a>
+                    <div>
+                        <span>Instagram</span>
+                        <strong>@_prabeen.js_</strong>
+                    </div>
 
-                </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+                </a>
 
+            </div>
+
+            <div class="contact-terminal reveal">
+                <span class="terminal-green">prabeen@portfolio</span>
+                <span>:</span>
+                <span>~$</span>
+                <span class="terminal-command">connect --with-me</span>
+                <span class="blink">_</span>
             </div>
 
         </section>
 
     </main>
 
-
     <!-- FOOTER -->
-    <footer>
+    <footer class="footer">
 
-        <div class="footer-content">
+        <div class="footer-top">
 
             <div class="footer-brand">
-
                 <a href="#home" class="logo">
-                    <span class="logo-symbol">&lt;/&gt;</span>
-                    <span>Prabin<span class="logo-dot">.</span></span>
+                    <span class="logo-bracket">&lt;</span>
+                    <span>PP</span>
+                    <span class="logo-bracket">/&gt;</span>
                 </a>
 
                 <p>
-                    Designed & built by Prabin Panthi.
+                    Student developer from Kathmandu,
+                    learning, building and experimenting.
                 </p>
-
             </div>
 
-
-            <div class="footer-socials">
-
-                <a
-                    href="https://github.com/prabeen43"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub"
-                >
-                    <i class="fa-brands fa-github"></i>
-                </a>
-
-                <a
-                    href="https://www.instagram.com/_prabeen.js_/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                >
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a
-                    href="mailto:panthiprabin91@gmail.com"
-                    aria-label="Email"
-                >
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-
+            <div class="footer-links">
+                <h4>Navigate</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </div>
 
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <a href="https://github.com/prabeen43" target="_blank" rel="noopener">
+                    GitHub
+                </a>
 
-            <div class="footer-bottom">
+                <a href="https://instagram.com/_prabeen.js_" target="_blank" rel="noopener">
+                    Instagram
+                </a>
 
-                <span>
-                    © <span id="year"></span> Prabin Panthi
-                </span>
-
-                <span>
-                    Built with HTML, CSS & JavaScript
-                </span>
-
+                <a href="mailto:panthiprabin91@gmail.com">
+                    Email
+                </a>
             </div>
 
         </div>
 
+        <div class="footer-bottom">
+            <span>
+                © <span id="currentYear"></span> Prabeen Panthi
+            </span>
+
+            <span class="footer-code">
+                Built with HTML · CSS · JavaScript
+            </span>
+
+            <span>
+                Made in Nepal
+            </span>
+        </div>
+
     </footer>
 
-
-    <!-- Back to top -->
-    <button
-        id="backToTop"
-        class="back-to-top"
-        aria-label="Back to top"
-    >
+    <button id="backToTop" class="back-top" aria-label="Back to top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
-
 
     <script src="script.js"></script>
 
