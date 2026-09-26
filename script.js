@@ -20,6 +20,17 @@ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entr
 document.querySelectorAll('.section,.project,.education-item,.hero-content,.hero-visual').forEach(el=>{el.classList.add('reveal');observer.observe(el)});
 
 const video=document.querySelector('.video-project video');
-if(video){video.addEventListener('loadedmetadata',()=>{video.controls=true;});}
+if(video){
+  video.controls = false;
+  video.muted = true;
+  video.defaultMuted = true;
+  video.loop = true;
+  video.playsInline = true;
+  const playVideo = () => { video.play().catch(() => {}); };
+  video.addEventListener('loadeddata', playVideo);
+  video.addEventListener('canplay', playVideo);
+  video.addEventListener('pause', playVideo);
+  video.addEventListener('ended', () => { video.currentTime = 0; playVideo(); });
+}
 
 window.addEventListener('keydown',e=>{if(e.key==='Escape'){navigation.classList.remove('open');menuButton.textContent='☰';}});
