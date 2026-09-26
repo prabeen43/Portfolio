@@ -23,3 +23,12 @@ const video=document.querySelector('.video-project video');
 if(video){video.addEventListener('loadedmetadata',()=>{video.controls=true;});}
 
 window.addEventListener('keydown',e=>{if(e.key==='Escape'){navigation.classList.remove('open');menuButton.textContent='☰';}});
+
+<video
+    src="videos/balloon-blitz.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto">
+</video>
