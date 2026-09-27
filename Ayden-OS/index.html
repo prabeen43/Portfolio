@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#060814">
+
+    <title>Ayden OS</title>
+
+    <!-- Ayden OS favicon -->
+    <link
+        rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235f8cff'/%3E%3Cstop offset='1' stop-color='%23a35cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='%23060814'/%3E%3Crect x='10' y='10' width='80' height='80' rx='21' fill='url(%23g)'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Arial' font-size='58' font-weight='900' fill='white'%3EA%3C/text%3E%3C/svg%3E"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     BOOT SCREEN
+===================================================== -->
+
+<div id="bootScreen">
+
+    <div class="boot-orbit">
+        <div class="boot-core">A</div>
+    </div>
+
+    <h1>AYDEN OS</h1>
+
+    <p id="bootStatus">Initializing kernel...</p>
+
+    <div class="boot-progress">
+        <div id="bootProgress"></div>
+    </div>
+
+    <div class="boot-info">
+        <span>AYDEN KERNEL</span>
+        <span>WEB EDITION</span>
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     LOCK SCREEN
+===================================================== -->
+
+<div id="lockScreen">
+
+    <div class="lock-wallpaper">
+
+        <div class="aurora aurora-one"></div>
+        <div class="aurora aurora-two"></div>
+        <div class="aurora aurora-three"></div>
+
+        <div class="stars" id="stars"></div>
+
+        <div class="grid-floor"></div>
+
+    </div>
+
+    <div class="lock-content">
+
+        <div class="lock-time" id="lockTime">
+            00:00
+        </div>
+
+        <div class="lock-date" id="lockDate">
+            Loading...
+        </div>
+
+        <div class="lock-user">
+
+            <div class="lock-avatar">
+                A
+            </div>
+
+            <h2>Ayden User</h2>
+
+            <p>Welcome back</p>
+
+            <button
+                id="loginButton"
+                onclick="unlockOS()"
+            >
+                Enter to Login
+            </button>
+
+            <small>
+                Press Enter ↵
+            </small>
+
+        </div>
+
+    </div>
+
+    <div class="lock-footer">
+        <span>AYDEN OS</span>
+        <span>WEB EDITION</span>
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     DESKTOP
+===================================================== -->
+
+<main id="desktop">
+
+    <div class="desktop-wallpaper">
+
+        <div class="wall-orb orb-one"></div>
+        <div class="wall-orb orb-two"></div>
+        <div class="wall-orb orb-three"></div>
+
+        <div class="wall-lines"></div>
+
+        <div class="wall-grid"></div>
+
+    </div>
+
+
+    <!-- =================================================
+         DESKTOP ICONS
+    ================================================== -->
+
+    <div class="desktop-icons">
+
+        <button
+            class="desktop-icon"
+            ondblclick="openApp('computer')"
+            onclick="selectDesktopIcon(this)"
+        >
+            <span class="desktop-icon-image">💻</span>
+            <span>This PC</span>
+        </button>
+
+
+        <button
+            class="desktop-icon"
+            ondblclick="openApp('files')"
+            onclick="selectDesktopIcon(this)"
+        >
+            <span class="desktop-icon-image">📁</span>
+            <span>File Explorer</span>
+        </button>
+
+
+        <button
+            class="desktop-icon"
+            ondblclick="openApp('browser')"
+            onclick="selectDesktopIcon(this)"
+        >
+            <span class="desktop-icon-image">🌐</span>
+            <span>Browser</span>
+        </button>
+
+
+        <button
+            class="desktop-icon"
+            ondblclick="openApp('terminal')"
+            onclick="selectDesktopIcon(this)"
+        >
+            <span class="desktop-icon-image">⌨️</span>
+            <span>Terminal</span>
+        </button>
+
+
+        <button
+            class="desktop-icon"
+            ondblclick="openApp('calculator')"
+            onclick="selectDesktopIcon(this)"
+        >
+            <span class="desktop-icon-image">🧮</span>
+            <span>Calculator</span>
+        </button>
+
+
+        <button
+            class="desktop-icon"
+            ondblclick="openApp('settings')"
+            onclick="selectDesktopIcon(this)"
+        >
+            <span class="desktop-icon-image">⚙️</span>
+            <span>Settings</span>
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         THIS PC
+    ================================================== -->
+
+    <section
+        class="window"
+        id="computerWindow"
+    >
+
+        <div
+            class="window-header"
+            data-drag-handle
+        >
+
+            <div class="window-title">
+                <span>💻</span>
+                <span>This PC</span>
+            </div>
+
+            <div class="window-controls">
+
+                <button onclick="minimizeWindow('computerWindow')">
+                    −
+                </button>
+
+                <button onclick="maximizeWindow('computerWindow')">
+                    □
+                </button>
+
+                <button
+                    class="close-button"
+                    onclick="closeWindow('computerWindow')"
+                >
+                    ×
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="window-body">
+
+            <div class="breadcrumb">
+                <span>💻</span>
+                This PC
+            </div>
+
+            <h2>Devices and drives</h2>
+
+
+            <div class="drive-grid">
+
+                <div
+                    class="drive-card"
+                    onclick="openFile('Local Disk (C:)')"
+                >
+
+                    <div class="drive-image">
+                        💾
+                    </div>
+
+                    <div class="drive-details">
+
+                        <strong>
+                            Local Disk (C:)
+                        </strong>
+
+                        <span>
+                            128 GB free of 256 GB
+                        </span>
+
+                        <div class="storage-bar">
+                            <div></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="drive-card"
+                    onclick="openFile('Ayden Cloud')"
+                >
+
+                    <div class="drive-image">
+                        ☁️
+                    </div>
+
+                    <div class="drive-details">
+
+                        <strong>
+                            Ayden Cloud
+                        </strong>
+
+                        <span>
+                            Connected
+                        </span>
+
+                        <div class="cloud-online">
+                            ● Online
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <h2 class="section-heading">
+                Network locations
+            </h2>
+
+
+            <div
+                class="network-card"
+                onclick="openExternal('https://prabin67.com.np')"
+            >
+
+                <span>🌐</span>
+
+                <div>
+                    <strong>
+                        Prabin Portfolio
+                    </strong>
+
+                    <small>
+                        prabin67.com.np
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         FILE EXPLORER
+    ================================================== -->
+
+    <section
+        class="window"
+        id="filesWindow"
+    >
+
+        <div
+            class="window-header"
+            data-drag-handle
+        >
+
+            <div class="window-title">
+                <span>📁</span>
+                <span>File Explorer</span>
+            </div>
+
+            <div class="window-controls">
+
+                <button onclick="minimizeWindow('filesWindow')">
+                    −
+                </button>
+
+                <button onclick="maximizeWindow('filesWindow')">
+                    □
+                </button>
+
+                <button
+                    class="close-button"
+                    onclick="closeWindow('filesWindow')"
+                >
+                    ×
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="explorer-body">
+
+            <aside class="explorer-sidebar">
+
+                <div class="sidebar-title">
+                    Quick access
+                </div>
+
+                <button
+                    class="sidebar-item active"
+                    onclick="showFolder('Home')"
+                >
+                    🏠 Home
+                </button>
+
+                <button
+                    class="sidebar-item"
+                    onclick="showFolder('Documents')"
+                >
+                    📄 Documents
+                </button>
+
+                <button
+                    class="sidebar-item"
+                    onclick="showFolder('Projects')"
+                >
+                    💻 Projects
+                </button>
+
+                <button
+                    class="sidebar-item"
+                    onclick="showFolder('Pictures')"
+                >
+                    🖼️ Pictures
+                </button>
+
+                <button
+                    class="sidebar-item"
+                    onclick="showFolder('Videos')"
+                >
+                    🎬 Videos
+                </button>
+
+                <button
+                    class="sidebar-item"
+                    onclick="showFolder('Downloads')"
+                >
+                    ⬇️ Downloads
+                </button>
+
+                <button
+                    class="sidebar-item"
+                    onclick="showFolder('Music')"
+                >
+                    🎵 Music
+                </button>
+
+            </aside>
+
+
+            <div class="explorer-main">
+
+                <div class="explorer-toolbar">
+
+                    <button onclick="showFolder('Home')">
+                        ←
+                    </button>
+
+                    <button onclick="showFolder('Home')">
+                        ⟳
+                    </button>
+
+                    <div class="address-bar">
+                        <span>📁</span>
+                        <span id="currentFolder">
+                            Home
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="explorer-content">
+
+                    <h2 id="folderTitle">
+                        Home
+                    </h2>
+
+                    <div
+                        class="file-grid"
+                        id="fileGrid"
+                    >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         BROWSER
+    ================================================== -->
+
+    <section
+        class="window"
+        id="browserWindow"
+    >
+
+        <div
+            class="window-header"
+            data-drag-handle
+        >
+
+            <div class="window-title">
+                <span>🌐</span>
+                <span>Ayden Browser</span>
+            </div>
+
+            <div class="window-controls">
+
+                <button onclick="minimizeWindow('browserWindow')">
+                    −
+                </button>
+
+                <button onclick="maximizeWindow('browserWindow')">
+                    □
+                </button>
+
+                <button
+                    class="close-button"
+                    onclick="closeWindow('browserWindow')"
+                >
+                    ×
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="browser-body">
+
+            <div class="browser-toolbar">
+
+                <button onclick="browserBack()">
+                    ←
+                </button>
+
+                <button onclick="browserForward()">
+                    →
+                </button>
+
+                <button onclick="browserHome()">
+                    ⌂
+                </button>
+
+                <input
+                    id="browserInput"
+                    value="https://www.google.com"
+                    placeholder="Search or enter a URL"
+                    onkeydown="browserKey(event)"
+                >
+
+                <button onclick="loadWebsite()">
+                    ↗
+                </button>
+
+            </div>
+
+
+            <div class="browser-home">
+
+                <div class="browser-logo">
+                    A
+                </div>
+
+                <h1>
+                    Ayden Browser
+                </h1>
+
+                <p>
+                    Explore the web from Ayden OS.
+                </p>
+
+
+                <div class="browser-search">
+
+                    <input
+                        id="searchInput"
+                        placeholder="Search Google..."
+                        onkeydown="if(event.key === 'Enter') searchWeb()"
+                    >
+
+                    <button onclick="searchWeb()">
+                        Search
+                    </button>
+
+                </div>
+
+
+                <div class="browser-links">
+
+                    <button
+                        onclick="openExternal('https://prabin67.com.np')"
+                    >
+                        <span>👨‍💻</span>
+                        Prabin Portfolio
+                    </button>
+
+                    <button
+                        onclick="openExternal('https://github.com/prabeen43')"
+                    >
+                        <span>◉</span>
+                        GitHub
+                    </button>
+
+                    <button
+                        onclick="openExternal('https://www.google.com')"
+                    >
+                        <span>G</span>
+                        Google
+                    </button>
+
+                    <button
+                        onclick="openExternal('https://youtube.com')"
+                    >
+                        <span>▶</span>
+                        YouTube
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         TERMINAL
+    ================================================== -->
+
+    <section
+        class="window terminal-window"
+        id="terminalWindow"
+    >
+
+        <div
+            class="window-header terminal-header"
+            data-drag-handle
+        >
+
+            <div class="window-title">
+                <span>⌨️</span>
+                <span>Ayden Terminal</span>
+            </div>
+
+            <div class="window-controls">
+
+                <button onclick="minimizeWindow('terminalWindow')">
+                    −
+                </button>
+
+                <button onclick="maximizeWindow('terminalWindow')">
+                    □
+                </button>
+
+                <button
+                    class="close-button"
+                    onclick="closeWindow('terminalWindow')"
+                >
+                    ×
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="terminal-body"
+            id="terminalBody"
+            onclick="focusTerminal()"
+        >
+
+            <div class="terminal-output">
+
+                <div class="terminal-line terminal-brand">
+                    <span>AYDEN TERMINAL</span>
+                </div>
+
+                <div class="terminal-line">
+                    Ayden OS Web Terminal v1.0
+                </div>
+
+                <div class="terminal-line muted">
+                    Type <strong>help</strong> to see available commands.
+                </div>
+
+                <br>
+
+            </div>
+
+
+            <div class="terminal-input-line">
+
+                <span class="terminal-prompt">
+                    prabin@ayden:~$
+                </span>
+
+                <input
+                    id="terminalInput"
+                    autocomplete="off"
+                    spellcheck="false"
+                    onkeydown="terminalKey(event)"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         CALCULATOR
+    ================================================== -->
+
+    <section
+        class="window calculator-window"
+        id="calculatorWindow"
+    >
+
+        <div
+            class="window-header"
+            data-drag-handle
+        >
+
+            <div class="window-title">
+                <span>🧮</span>
+                Calculator
+            </div>
+
+            <div class="window-controls">
+
+                <button onclick="minimizeWindow('calculatorWindow')">
+                    −
+                </button>
+
+                <button onclick="maximizeWindow('calculatorWindow')">
+                    □
+                </button>
+
+                <button
+                    class="close-button"
+                    onclick="closeWindow('calculatorWindow')"
+                >
+                    ×
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="calculator">
+
+            <input
+                id="calcDisplay"
+                readonly
+                value="0"
+            >
+
+
+            <div class="calc-buttons">
+
+                <button
+                    class="special"
+                    onclick="clearCalc()"
+                >
+                    AC
+                </button>
+
+                <button
+                    class="special"
+                    onclick="deleteCalc()"
+                >
+                    ⌫
+                </button>
+
+                <button
+                    class="operator"
+                    onclick="addCalc('%')"
+                >
+                    %
+                </button>
+
+                <button
+                    class="operator"
+                    onclick="addCalc('/')"
+                >
+                    ÷
+                </button>
+
+
+                <button onclick="addCalc('7')">
+                    7
+                </button>
+
+                <button onclick="addCalc('8')">
+                    8
+                </button>
+
+                <button onclick="addCalc('9')">
+                    9
+                </button>
+
+                <button
+                    class="operator"
+                    onclick="addCalc('*')"
+                >
+                    ×
+                </button>
+
+
+                <button onclick="addCalc('4')">
+                    4
+                </button>
+
+                <button onclick="addCalc('5')">
+                    5
+                </button>
+
+                <button onclick="addCalc('6')">
+                    6
+                </button>
+
+                <button
+                    class="operator"
+                    onclick="addCalc('-')"
+                >
+                    −
+                </button>
+
+
+                <button onclick="addCalc('1')">
+                    1
+                </button>
+
+                <button onclick="addCalc('2')">
+                    2
+                </button>
+
+                <button onclick="addCalc('3')">
+                    3
+                </button>
+
+                <button
+                    class="operator"
+                    onclick="addCalc('+')"
+                >
+                    +
+                </button>
+
+
+                <button
+                    class="zero"
+                    onclick="addCalc('0')"
+                >
+                    0
+                </button>
+
+                <button onclick="addCalc('.')">
+                    .
+                </button>
+
+                <button
+                    class="equals"
+                    onclick="calculate()"
+                >
+                    =
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         SETTINGS
+    ================================================== -->
+
+    <section
+        class="window"
+        id="settingsWindow"
+    >
+
+        <div
+            class="window-header"
+            data-drag-handle
+        >
+
+            <div class="window-title">
+                <span>⚙️</span>
+                Settings
+            </div>
+
+            <div class="window-controls">
+
+                <button onclick="minimizeWindow('settingsWindow')">
+                    −
+                </button>
+
+                <button onclick="maximizeWindow('settingsWindow')">
+                    □
+                </button>
+
+                <button
+                    class="close-button"
+                    onclick="closeWindow('settingsWindow')"
+                >
+                    ×
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="settings-content">
+
+            <div class="settings-heading">
+                <span>⚙️</span>
+                <div>
+                    <h2>Settings</h2>
+                    <p>Customize your Ayden OS experience.</p>
+                </div>
+            </div>
+
+
+            <div class="setting-card">
+
+                <div>
+                    <strong>Dark Mode</strong>
+                    <p>
+                        Switch between dark and light appearance.
+                    </p>
+                </div>
+
+                <button
+                    id="themeToggle"
+                    class="toggle active"
+                    onclick="toggleTheme()"
+                >
+                    ON
+                </button>
+
+            </div>
+
+
+            <div
+                class="setting-card clickable-setting"
+                onclick="openExternal('https://prabin67.com.np')"
+            >
+
+                <div>
+                    <strong>Prabin Portfolio</strong>
+                    <p>
+                        Visit the developer portfolio.
+                    </p>
+                </div>
+
+                <span>↗</span>
+
+            </div>
+
+
+            <div
+                class="setting-card clickable-setting"
+                onclick="openExternal('https://github.com/prabeen43')"
+            >
+
+                <div>
+                    <strong>GitHub</strong>
+                    <p>
+                        View source code and projects.
+                    </p>
+                </div>
+
+                <span>↗</span>
+
+            </div>
+
+
+            <div class="setting-card">
+
+                <div>
+                    <strong>System</strong>
+                    <p>
+                        Ayden OS Web Edition · Version 1.0
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         START MENU
+    ================================================== -->
+
+    <div id="startMenu">
+
+        <div class="start-top">
+
+            <div class="start-avatar">
+                A
+            </div>
+
+            <div>
+                <strong>Ayden User</strong>
+                <small>Administrator</small>
+            </div>
+
+        </div>
+
+
+        <div class="start-search">
+
+            <span>⌕</span>
+
+            <input
+                id="startSearch"
+                placeholder="Search apps..."
+                oninput="filterApps()"
+            >
+
+        </div>
+
+
+        <div class="start-section-title">
+            Pinned
+        </div>
+
+
+        <div
+            class="start-app-grid"
+            id="appList"
+        >
+
+            <button onclick="startApp('computer')">
+                <span>💻</span>
+                This PC
+            </button>
+
+            <button onclick="startApp('files')">
+                <span>📁</span>
+                Files
+            </button>
+
+            <button onclick="startApp('browser')">
+                <span>🌐</span>
+                Browser
+            </button>
+
+            <button onclick="startApp('terminal')">
+                <span>⌨️</span>
+                Terminal
+            </button>
+
+            <button onclick="startApp('calculator')">
+                <span>🧮</span>
+                Calculator
+            </button>
+
+            <button onclick="startApp('settings')">
+                <span>⚙️</span>
+                Settings
+            </button>
+
+        </div>
+
+
+        <div class="start-bottom">
+
+            <span>
+                Ayden OS
+            </span>
+
+            <button onclick="restartOS()">
+                ⟳ Restart
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         TASKBAR
+    ================================================== -->
+
+    <footer class="taskbar">
+
+        <button
+            class="start-button"
+            onclick="toggleStartMenu()"
+            title="Start"
+        >
+            <span>A</span>
+        </button>
+
+
+        <div class="taskbar-apps">
+
+            <button
+                onclick="openApp('computer')"
+                title="This PC"
+            >
+                💻
+            </button>
+
+            <button
+                onclick="openApp('files')"
+                title="File Explorer"
+            >
+                📁
+            </button>
+
+            <button
+                onclick="openApp('browser')"
+                title="Browser"
+            >
+                🌐
+            </button>
+
+            <button
+                onclick="openApp('terminal')"
+                title="Terminal"
+            >
+                ⌨️
+            </button>
+
+            <button
+                onclick="openApp('calculator')"
+                title="Calculator"
+            >
+                🧮
+            </button>
+
+        </div>
+
+
+        <div class="taskbar-tray">
+
+            <span>⌃</span>
+            <span>◉</span>
+            <span>⌁</span>
+            <span>▣</span>
+
+            <div class="taskbar-clock">
+
+                <strong id="clockTime">
+                    00:00
+                </strong>
+
+                <small id="clockDate">
+                    00/00/0000
+                </small>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</main>
+
+
+<!-- =====================================================
+     FILE VIEWER
+===================================================== -->
+
+<div id="fileViewer">
+
+    <div class="file-viewer-card">
+
+        <div class="file-viewer-header">
+
+            <strong id="viewerTitle">
+                File
+            </strong>
+
+            <button onclick="closeFileViewer()">
+                ×
+            </button>
+
+        </div>
+
+        <div
+            id="viewerContent"
+            class="file-viewer-content"
+        >
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
